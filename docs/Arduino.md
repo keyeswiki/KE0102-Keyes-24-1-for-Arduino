@@ -30,14 +30,11 @@
 
 ![](media/4baf5095962e49c1f3ebeb6c2da823f0.png)
 
-接下来是开发板驱动的安装，这次我们安装的是Keyes UNO R3
-开发板的驱动，Keyes 2560 R3
-开发板安装驱动方法和这个类似，驱动文件可以用同一个文件。
+接下来是开发板驱动的安装，这次我们安装的是Keyes UNO R3开发板的驱动，Keyes 2560 R3开发板安装驱动方法和这个类似，驱动文件可以用同一个文件。
 
 不同的系统，安装驱动的方法也有一些细小的区别，下面我们介绍在WIN 7系统安装驱动的方法。
 
-第一次Keyes UNO R3
-开发板连接电脑时，点击计算机--属性--设备管理器，显示如下图。
+第一次Keyes UNO R3开发板连接电脑时，点击计算机--属性--设备管理器，显示如下图。
 
 ![](media/ef888e8d5fad0b30e4da671933f8842c.png)
 
@@ -65,8 +62,7 @@
 
 # Arduino IDE的使用方法
 
-Keyes UNO R3
-开发板的USB驱动安装成功之后，我们可以在Windows设备管理器中找到相应的串口。
+Keyes UNO R3开发板的USB驱动安装成功之后，我们可以在Windows设备管理器中找到相应的串口。
 
 下面示范第一个程序的烧写，串口监视器中显示“Hello World！”。
 
@@ -77,27 +73,26 @@ int val;
 int ledpin=13; 
 void setup()
 {
-Serial.begin(9600);
-pinMode(ledpin,OUTPUT);
+    Serial.begin(9600);
+    pinMode(ledpin,OUTPUT);
 }
 void loop()
 {
-val=Serial.read();
-if(val=='R')
-{
-digitalWrite(ledpin,HIGH);
-delay(500);
-digitalWrite(ledpin,LOW);
-delay(500);
-Serial.println("Hello World!");
-}
+    val=Serial.read();
+    if(val=='R')
+    {
+        digitalWrite(ledpin,HIGH);
+        delay(500);
+        digitalWrite(ledpin,LOW);
+        delay(500);
+        Serial.println("Hello World!");
+    }
 }
 ```
 
 
 
-我们打开Arduino 的软件，编写一段程序让Keyes UNO R3开发板接受到我们发的指令就显示“Hello World！”字符串；我们再借用一下Keyes UNO R3 开发板上的 D13的指示灯，让Keyes UNO R3
-开发板接受到指令时指示灯闪烁一下，再显示“Hello World！”。
+我们打开Arduino 的软件，编写一段程序让Keyes UNO R3开发板接受到我们发的指令就显示“Hello World！”字符串；我们再借用一下Keyes UNO R3 开发板上的 D13的指示灯，让Keyes UNO R3开发板接受到指令时指示灯闪烁一下，再显示“Hello World！”。
 
 打开Arduino 的软件，设置板，如下。
 
@@ -143,6 +138,7 @@ LED模块*1
 
 代码A:
 
+```
 int led = 3; //定义数字口3
 
 void setup()
@@ -166,16 +162,18 @@ void loop()
   delay(1000);//延迟1秒
 
 }
+```
 
 代码B:
 
+```
 int ledPin = 3; // 定义数字口3
 
 void setup()
 
 {
 
-pinMode(ledPin, OUTPUT);// 将ledPin设置为输出
+	pinMode(ledPin, OUTPUT);// 将ledPin设置为输出
 
 }
 
@@ -183,31 +181,30 @@ void loop()
 
 {
 
-for (int a=0; a\<=255;a++)// 设置使LED逐渐变亮
+    for (int a=0; a<=255;a++)// 设置使LED逐渐变亮
 
-{
+    {
 
-analogWrite(ledPin,a); //
-开启led,调节亮度，范围是0-255，在255时led最亮
+        analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
 
-delay(10); // 延迟0.01秒
+        delay(10); // 延迟0.01秒
 
-}
+    }
 
-for (int a=255; a\>=0;a--) // 设置使LED逐渐变暗
+    for (int a=255; a>=0;a--) // 设置使LED逐渐变暗
 
-{
+    {
 
-analogWrite(ledPin,a); //
-开启led,调节亮度，范围是0-255，在255时led最亮
+        analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
 
-delay(10); // 延迟0.01秒
+        delay(10); // 延迟0.01秒
 
-}
+    }
 
-delay(1000);// 延迟1秒
+    delay(1000);// 延迟1秒
 
 }
+```
 
 测试结果
 
@@ -235,6 +232,7 @@ USB线*1
 
 测试代码
 
+```
 int Led=13;//定义数字口13
 
 int buttonpin=3; //定义数字口3
@@ -245,9 +243,9 @@ void setup()
 
 {
 
-pinMode(Led,OUTPUT);//将Led设置为输出
+    pinMode(Led,OUTPUT);//将Led设置为输出
 
-pinMode(buttonpin,INPUT);//将buttonpin设置为输入
+    pinMode(buttonpin,INPUT);//将buttonpin设置为输入
 
 }
 
@@ -255,31 +253,30 @@ void loop()
 
 {
 
-val=digitalRead(buttonpin);// 读取数字口3的数值，并赋值给val
+    val=digitalRead(buttonpin);// 读取数字口3的数值，并赋值给val
 
-if(val==LOW)//当val为高电平时
+    if(val==LOW)//当val为高电平时
 
-{
+    {
 
-digitalWrite(Led,HIGH); //LED亮起
+    	digitalWrite(Led,HIGH); //LED亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(Led,LOW); //LED熄灭
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(Led,LOW); //LED熄灭
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码，上电后，Arduino UNO 板上的 D13
-的指示灯熄灭，模块上D1灯熄灭；当有磁铁靠近模块时， Arduino UNO 板上的
-D13 的指示灯亮起，模块上D1灯亮。
+按照上图接好线，上传好代码，上电后，Arduino UNO 板上的 D13的指示灯熄灭，模块上D1灯熄灭；当有磁铁靠近模块时， Arduino UNO 板上的D13 的指示灯亮起，模块上D1灯亮。
 
 ## 实验三 有源蜂鸣器模块
 
@@ -303,6 +300,7 @@ USB线*1
 
 测试代码
 
+```
 int buzzPin = 3;    //定义数字口3
 
  void setup() 
@@ -326,6 +324,7 @@ int buzzPin = 3;    //定义数字口3
   delay(2000);  //延迟2秒     
 
 }
+```
 
 测试结果
 
@@ -357,13 +356,14 @@ USB线*1
 
 代码A:
 
+```
 int buzzer=3; //定义数字口3
 
 void setup()
 
 {
 
-pinMode(buzzer,OUTPUT);//将buzzer设置为输出
+	pinMode(buzzer,OUTPUT);//将buzzer设置为输出
 
 }
 
@@ -371,214 +371,140 @@ void loop()
 
 {
 
-unsigned char i,j;//定义变量i，j
+    unsigned char i,j;//定义变量i，j
 
-while(1)
+    while(1)
 
-{
+    {
 
-for(i=0;i\<80;i++)// 输出一个频率的声音
+        for(i=0;i<80;i++)// 输出一个频率的声音
 
-{
+        {
 
-digitalWrite(buzzer,HIGH);
+            digitalWrite(buzzer,HIGH);
 
-delay(1);//延迟1ms
+            delay(1);//延迟1ms
 
-digitalWrite(buzzer,LOW);
+            digitalWrite(buzzer,LOW);
 
-delay(1);//延迟1ms
+            delay(1);//延迟1ms
+
+        }
+
+        for(i=0;i<100;i++)// 输出另一个频率的声音
+
+        {
+
+            digitalWrite(buzzer,HIGH);
+
+            delay(2);//延迟2ms
+
+            digitalWrite(buzzer,LOW);
+
+            delay(2);//延迟2ms
+
+        }
+
+    }
 
 }
-
-for(i=0;i\<100;i++)// 输出另一个频率的声音
-
-{
-
-digitalWrite(buzzer,HIGH);
-
-delay(2);//延迟2ms
-
-digitalWrite(buzzer,LOW);
-
-delay(2);//延迟2ms
-
-}
-
-}
-
-}
+```
 
 代码B:
 
-\#define D0 -1
-
-\#define D1 262
-
-\#define D2 293
-
-\#define D3 329
-
-\#define D4 349
-
-\#define D5 392
-
-\#define D6 440
-
-\#define D7 494
-
-\#define M1 523
-
-\#define M2 586
-
-\#define M3 658
-
-\#define M4 697
-
-\#define M5 783
-
-\#define M6 879
-
-\#define M7 987
-
-\#define H1 1045
-
-\#define H2 1171
-
-\#define H3 1316
-
-\#define H4 1393
-
-\#define H5 1563
-
-\#define H6 1755
-
-\#define H7 1971
+```
+#define D0 -1
+#define D1 262
+#define D2 293
+#define D3 329
+#define D4 349
+#define D5 392
+#define D6 440
+#define D7 494
+#define M1 523
+#define M2 586
+#define M3 658
+#define M4 697
+#define M5 783
+#define M6 879
+#define M7 987
+#define H1 1045
+#define H2 1171
+#define H3 1316
+#define H4 1393
+#define H5 1563
+#define H6 1755
+#define H7 1971
 
 //列出全部D调的频率
-
-\#define WHOLE 1
-
-\#define HALF 0.5
-
-\#define QUARTER 0.25
-
-\#define EIGHTH 0.25
-
-\#define SIXTEENTH 0.625
-
+#define WHOLE 1
+#define HALF 0.5
+#define QUARTER 0.25
+#define EIGHTH 0.25
+#define SIXTEENTH 0.625
 //列出所有节拍
 
-int tune\[\]= //根据简谱列出各频率
-
+int tune[]= //根据简谱列出各频率
 {
-
-M3,M3,M4,M5,
-
-M5,M4,M3,M2,
-
-M1,M1,M2,M3,
-
-M3,M2,M2,
-
-M3,M3,M4,M5,
-
-M5,M4,M3,M2,
-
-M1,M1,M2,M3,
-
-M2,M1,M1,
-
-M2,M2,M3,M1,
-
-M2,M3,M4,M3,M1,
-
-M2,M3,M4,M3,M2,
-
-M1,M2,D5,D0,
-
-M3,M3,M4,M5,
-
-M5,M4,M3,M4,M2,
-
-M1,M1,M2,M3,
-
-M2,M1,M1
-
+    M3,M3,M4,M5,
+    M5,M4,M3,M2,
+    M1,M1,M2,M3,
+    M3,M2,M2,
+    M3,M3,M4,M5,
+    M5,M4,M3,M2,
+    M1,M1,M2,M3,
+    M2,M1,M1,
+    M2,M2,M3,M1,
+    M2,M3,M4,M3,M1,
+    M2,M3,M4,M3,M2,
+    M1,M2,D5,D0,
+    M3,M3,M4,M5,
+    M5,M4,M3,M4,M2,
+    M1,M1,M2,M3,
+    M2,M1,M1
 };
 
-float durt\[\]= //根据简谱列出各节拍
-
+float durt[]= //根据简谱列出各节拍
 {
-
-1,1,1,1,
-
-1,1,1,1,
-
-1,1,1,1,
-
-1+0.5,0.5,1+1,
-
-1,1,1,1,
-
-1,1,1,1,
-
-1,1,1,1,
-
-1+0.5,0.5,1+1,
-
-1,1,1,1,
-
-1,0.5,0.5,1,1,
-
-1,0.5,0.5,1,1,
-
-1,1,1,1,
-
-1,1,1,1,
-
-1,1,1,0.5,0.5,
-
-1,1,1,1,
-
-1+0.5,0.5,1+1,
-
+    1,1,1,1,
+    1,1,1,1,
+    1,1,1,1,
+    1+0.5,0.5,1+1,
+    1,1,1,1,
+    1,1,1,1,
+    1,1,1,1,
+    1+0.5,0.5,1+1,
+    1,1,1,1,
+    1,0.5,0.5,1,1,
+    1,0.5,0.5,1,1,
+    1,1,1,1,
+    1,1,1,1,
+    1,1,1,0.5,0.5,
+    1,1,1,1,
+    1+0.5,0.5,1+1,
 };
 
 int length;
-
 int tonepin=3; //得用3号接口
 
 void setup()
-
 {
-
-pinMode(tonepin,OUTPUT);
-
-length=sizeof(tune)/sizeof(tune\[0\]); //计算长度
-
+    pinMode(tonepin,OUTPUT);
+    length=sizeof(tune)/sizeof(tune[0]); //计算长度
 }
 
 void loop()
-
 {
-
-for(int x=0;x\<length;x++)
-
-{
-
-tone(tonepin,tune\[x\]);
-
-delay(500\*durt\[x\]);
-//这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。
-
-noTone(tonepin);
-
+    for(int x=0;x<length;x++)
+    {
+        tone(tonepin,tune[x]);
+        delay(500*durt[x]);
+        //这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。
+        noTone(tonepin);
+    }
+    delay(2000);
 }
-
-delay(2000);
-
-}
+```
 
 测试结果
 
@@ -608,6 +534,7 @@ LED模块\*2
 
 测试代码
 
+```
 const int interruptA = 0; //中断0就是在数字口2
 
 const int interruptB = 1;//中断1就是在数字口3
@@ -628,27 +555,27 @@ void setup()
 
 {
 
-attachInterrupt(interruptA, RoteStateChanged, FALLING);
+    attachInterrupt(interruptA, RoteStateChanged, FALLING);
 
-// 当数字口2由高电平变为低电平时，触发中断。
+    // 当数字口2由高电平变为低电平时，触发中断。
 
-pinMode(CLK, INPUT);//设置CLK为输入
+    pinMode(CLK, INPUT);//设置CLK为输入
 
-digitalWrite(2, HIGH); // 设置数字口2为高电平
+    digitalWrite(2, HIGH); // 设置数字口2为高电平
 
-pinMode(DAT, INPUT); //设置DAT为输入
+    pinMode(DAT, INPUT); //设置DAT为输入
 
-digitalWrite(3, HIGH); //设置数字口3为高电平
+    digitalWrite(3, HIGH); //设置数字口3为高电平
 
-pinMode(BUTTON, INPUT); //设置BUTTON为输入
+    pinMode(BUTTON, INPUT); //设置BUTTON为输入
 
-digitalWrite(4, HIGH); //设置数字口4为高电平
+    digitalWrite(4, HIGH); //设置数字口4为高电平
 
-pinMode(LED1, OUTPUT);//设置LED1为输出
+    pinMode(LED1, OUTPUT);//设置LED1为输出
 
-pinMode(LED2, OUTPUT);//设置LED1为输出
+    pinMode(LED2, OUTPUT);//设置LED1为输出
 
-Serial.begin(9600); //设置波特率
+    Serial.begin(9600); //设置波特率
 
 }
 
@@ -656,23 +583,23 @@ void loop()
 
 {
 
-if (digitalRead(BUTTON)==LOW)//当数字口4为低电平时
+    if (digitalRead(BUTTON)==LOW)//当数字口4为低电平时
 
-{
+    {
 
-COUNT = 0; //设置数字变量COUNT为0
+        COUNT = 0; //设置数字变量COUNT为0
 
-Serial.println("STOP COUNT = 0");//显示对于内容
+        Serial.println("STOP COUNT = 0");//显示对于内容
 
-digitalWrite(LED1, LOW);//LED1变暗
+        digitalWrite(LED1, LOW);//LED1变暗
 
-digitalWrite(LED2, LOW);//LED2变暗
+        digitalWrite(LED2, LOW);//LED2变暗
 
-delay (2000);//延迟2S
+        delay (2000);//延迟2S
 
-}
+    }
 
-Serial.println(COUNT);//显示COUNT数据
+    Serial.println(COUNT);//显示COUNT数据
 
 }
 
@@ -680,35 +607,36 @@ void RoteStateChanged() //当数字口2由高电平变为低电平时
 
 {
 
-if (digitalRead(DAT)==HIGH) // 当数字口3为高电平时
+    if (digitalRead(DAT)==HIGH) // 当数字口3为高电平时
 
-{
+    {
 
-COUNT++;//数字变量COUNT加1
+        COUNT++;//数字变量COUNT加1
 
-digitalWrite(LED1, HIGH);//LED1亮起
+        digitalWrite(LED1, HIGH);//LED1亮起
 
-digitalWrite(LED2, LOW);//LED2变暗
+        digitalWrite(LED2, LOW);//LED2变暗
 
-delay(200);//延迟0.2S
+        delay(200);//延迟0.2S
+
+    }
+
+    else
+
+    {
+
+        COUNT--;//数字变量COUNT减1
+
+        digitalWrite(LED2, HIGH);//LED2亮起
+
+        digitalWrite(LED1, LOW);//LED1变暗
+
+        delay(200);//延迟0.2S
+
+    }
 
 }
-
-else
-
-{
-
-COUNT--;//数字变量COUNT减1
-
-digitalWrite(LED2, HIGH);//LED2亮起
-
-digitalWrite(LED1, LOW);//LED1变暗
-
-delay(200);//延迟0.2S
-
-}
-
-}
+```
 
 测试结果
 
@@ -736,6 +664,7 @@ USB线*1
 
 测试代码
 
+```
 int sensorPin =A0 ; //定义模拟口A0
 
 int value = 0; //设置value为0
@@ -744,7 +673,7 @@ void setup()
 
 {
 
-Serial.begin(9600);//设置波特率
+	Serial.begin(9600);//设置波特率
 
 }
 
@@ -752,18 +681,18 @@ void loop()
 
 {
 
-value = analogRead(sensorPin); //将value设置为读取到的A0的数值
+    value = analogRead(sensorPin); //将value设置为读取到的A0的数值
 
-Serial.println(value, DEC); //显示value数值，并自动换行
+    Serial.println(value, DEC); //显示value数值，并自动换行
 
-delay(100); //延迟0.1秒
+    delay(100); //延迟0.1秒
 
 }
+```
 
 测试结果
 
-按照上图接好线，烧录好代码，上电后，我们可以在软件的串口监视器中看到模拟口A0模拟值，旋转旋钮，数据变化，变化范围在
-0-1023，如下图。
+按照上图接好线，烧录好代码，上电后，我们可以在软件的串口监视器中看到模拟口A0模拟值，旋转旋钮，数据变化，变化范围在0-1023，如下图。
 
 ![](media/8517383472ca20d112b9ccc138661cd5.png)
 
@@ -790,13 +719,14 @@ USB线*1
 
 测试代码
 
+```
 int Relay = 3; //定义数字口3
 
 void setup()
 
 {
 
-pinMode(Relay, OUTPUT); //将Relay设置为输出
+	pinMode(Relay, OUTPUT); //将Relay设置为输出
 
 }
 
@@ -804,15 +734,16 @@ void loop()
 
 {
 
-digitalWrite(Relay, HIGH); //打开继电器
+    digitalWrite(Relay, HIGH); //打开继电器
 
-delay(2000); //延时2秒
+    delay(2000); //延时2秒
 
-digitalWrite(Relay, LOW); //关闭继电器
+    digitalWrite(Relay, LOW); //关闭继电器
 
-delay(2000); //延时2秒
+    delay(2000); //延时2秒
 
 }
+```
 
 测试结果
 
@@ -822,9 +753,7 @@ delay(2000); //延时2秒
 
 实验说明
 
-本实验我们主要用来检测插件RGB模块。本模块由主要一个插件全彩LED制成，通过
-R、 G、
-B三个引脚的PWM电压输入可以调节三种基色（红/蓝/绿）的强度从而实现全彩的混色效果。我们用Arduino对模块的控制可实现酷炫的灯光效果。实验中我们让插件RGB模块循环显示不同颜色。
+本实验我们主要用来检测插件RGB模块。本模块由主要一个插件全彩LED制成，通过R、 G、B三个引脚的PWM电压输入可以调节三种基色（红/蓝/绿）的强度从而实现全彩的混色效果。我们用Arduino对模块的控制可实现酷炫的灯光效果。实验中我们让插件RGB模块循环显示不同颜色。
 
 实验器材
 
@@ -842,85 +771,61 @@ USB线*1
 
 测试代码
 
-int redPin = 6; // R 红色LED 控制引脚 连接到Arduino的 6脚
-
-int greenPin = 5; // G绿色LED 控制引脚 连接到Arduino的5脚
-
-int bluePin = 3; // B蓝色LED 控制引脚 连接到Arduino的3脚
+```
+int redPin = 6;   // 红色LED控制引脚，连接到Arduino的6脚
+int greenPin = 5; // 绿色LED控制引脚，连接到Arduino的5脚
+int bluePin = 3;  // 蓝色LED控制引脚，连接到Arduino的3脚
 
 void setup()
-
 {
-
-pinMode(redPin, OUTPUT); //设置redPin对应的管脚6为输出
-
-pinMode(greenPin, OUTPUT); //设置greenPin,对应的管脚5为输出
-
-pinMode(bluePin, OUTPUT); //设置bluePin对应的管脚3为输出
-
+    pinMode(redPin, OUTPUT);   // 设置redPin对应的管脚6为输出模式
+    pinMode(greenPin, OUTPUT); // 设置greenPin对应的管脚5为输出模式
+    pinMode(bluePin, OUTPUT);  // 设置bluePin对应的管脚3为输出模式
 }
 
-void loop() // run over and over again
-
+void loop() 
 {
-
-// Basic colors:
-
-color(255, 0, 0); // 红色亮
-
-delay(1000); // 延时一秒
-
-color(0,255, 0); //绿色亮
-
-delay(1000); //延时一秒
-
-color(0, 0, 255); // 蓝色灯亮
-
-delay(1000); //延时一秒
-
-// Example blended colors:
-
-color(255,255,0); // 黄色亮
-
-delay(1000); //延时一秒
-
-color(128,0,255); // 紫色亮
-
-delay(1000); //延时一秒
-
-color(255,255,255); // 白色亮
-
-delay(1000); //延时一秒
-
-color(0,0,0); // 关闭led
-
-delay(1000); //延时一秒
-
+    // 基本颜色:
+    color(255, 0, 0);    // 红色亮
+    delay(1000);         // 延时一秒
+    
+    color(0, 255, 0);    // 绿色亮
+    delay(1000);         // 延时一秒
+    
+    color(0, 0, 255);    // 蓝色亮
+    delay(1000);         // 延时一秒
+    
+    // 混合颜色示例:
+    color(255, 255, 0);  // 黄色亮
+    delay(1000);         // 延时一秒
+    
+    color(128, 0, 255); // 紫色亮
+    delay(1000);         // 延时一秒
+    
+    color(255, 255, 255); // 白色亮
+    delay(1000);          // 延时一秒
+    
+    color(0, 0, 0);      // 关闭LED
+    delay(1000);         // 延时一秒
 }
 
-void color (unsigned char red, unsigned char green, unsigned char blue) //颜色控制函数
-
+void color(unsigned char red, unsigned char green, unsigned char blue) // 颜色控制函数
 {
-
-analogWrite(redPin, red);
-
-analogWrite(greenPin,green);
-
-analogWrite(bluePin, blue);
-
+    analogWrite(redPin, red);
+    analogWrite(greenPin, green);
+    analogWrite(bluePin, blue);
 }
+```
 
 测试结果
 
-上传完代码，上电后
-，RGB模块会陆续显示红色1秒，绿色1秒，蓝色1秒，黄色1秒，紫色1秒，白色1秒，停止显示1秒，然后循环交替。
+上传完代码，上电后，RGB模块会陆续显示红色1秒，绿色1秒，蓝色1秒，黄色1秒，紫色1秒，白色1秒，停止显示1秒，然后循环交替。
 
 ## 实验九 热敏电阻传感器
 
 实验说明
 
-本实验我们主要用来检测热敏电阻传感器。它是基于热敏电阻的工作原理，能够实时感知周边环境温度的变化，我们把数据送到
-Arduino的模拟口，接来下我们只要经过简单的编程就能将传感器输出的数据转换为摄氏温度值，并加以显示，借此广泛应用于园艺、家庭警报系统等装置中。
+本实验我们主要用来检测热敏电阻传感器。它是基于热敏电阻的工作原理，能够实时感知周边环境温度的变化，我们把数据送到Arduino的模拟口，接来下我们只要经过简单的编程就能将传感器输出的数据转换为摄氏温度值，并加以显示，借此广泛应用于园艺、家庭警报系统等装置中。
 
 实验中将传感器的信号端接到开发板的模拟口A0，在Arduino IDE的串口监视器上可看到当前环境中的温度值。
 
@@ -940,42 +845,30 @@ USB线*1
 
 测试代码
 
-\#include \<math.h\>
+```
+#include <math.h>
 
-double Thermister(int RawADC) {
-
-double Temp;
-
-Temp = log(((10240000/RawADC) - 10000));
-
-Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 \* Temp \*
-Temp ))\* Temp );
-
-Temp = Temp - 273.15; // Convert Kelvin to Celcius
-
-return Temp;
-
-}
-
-void setup()
-
+double Thermister(int RawADC) 
 {
-
-Serial.begin(9600); //设置波特率
-
+    double Temp;
+    Temp = log(((10240000 / RawADC) - 10000));
+    Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * Temp * Temp)) * Temp);
+    Temp = Temp - 273.15;  // 将开尔文温度转换为摄氏度
+    return Temp;
 }
 
-void loop()
-
+void setup() 
 {
-
-Serial.print(Thermister(analogRead(0))); // 显示计算的温度值
-
-Serial.println("c"); // 显示c，并自动换行
-
-delay(500); // 延迟0.5S
-
+    Serial.begin(9600);  // 设置串口波特率为9600
 }
+
+void loop() 
+{
+    Serial.print(Thermister(analogRead(0)));  // 读取并显示计算得到的温度值
+    Serial.println("c");                      // 显示单位"c"并自动换行
+    delay(500);                               // 延迟500毫秒(0.5秒)
+}
+```
 
 测试结果
 
@@ -1005,6 +898,7 @@ USB线*1
 
 测试代码
 
+```
 int ledPin = 13; //定义数字口13
 
 int inputPin = 3; //定义数字口3
@@ -1013,9 +907,9 @@ void setup()
 
 {
 
-pinMode(ledPin, OUTPUT); //将ledPin设置为输出
+    pinMode(ledPin, OUTPUT); //将ledPin设置为输出
 
-pinMode(inputPin, INPUT); //将inputPin设置为输入
+    pinMode(inputPin, INPUT); //将inputPin设置为输入
 
 }
 
@@ -1023,33 +917,32 @@ void loop()
 
 {
 
-int val = digitalRead(inputPin);
+    int val = digitalRead(inputPin);
 
-//设置数字变量val，读取到数字口3的数值，并赋值给 val
+    //设置数字变量val，读取到数字口3的数值，并赋值给 val
 
-if (val == LOW) //当val为低电平时，LED亮起
+    if (val == LOW) //当val为低电平时，LED亮起
 
-{
+    {
 
-digitalWrite(ledPin, HIGH); // LED亮起
+    	digitalWrite(ledPin, HIGH); // LED亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(ledPin, LOW); // LED变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(ledPin, LOW); // LED变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码，上电后，按下传感器按键后， Arduino UNO
-板上的 D13 的指示灯亮起，释放传感器按键后， Arduino UNO 板上的 D13
-的指示灯熄灭。
+按照上图接好线，上传好代码，上电后，按下传感器按键后， Arduino UNO板上的 D13 的指示灯亮起，释放传感器按键后， Arduino UNO 板上的 D13的指示灯熄灭。
 
 ## 实验十一 DHT11温湿度传感器
 
@@ -1075,75 +968,53 @@ DHT11温湿度传感器*1
 
 测试代码
 
-\#include \<dht11.h\>
+```
+#include <dht11.h>
 
 dht11 DHT;
+#define DHT11_PIN 3
 
-\#define DHT11_PIN 3
-
-void setup(){
-
-Serial.begin(9600);
-
-Serial.println("DHT TEST PROGRAM ");
-
-Serial.print("LIBRARY VERSION: ");
-
-Serial.println(DHT11LIB_VERSION);
-
-Serial.println();
-
-Serial.println("Type,\tstatus,\tHumidity (%),\tTemperature (C)");
-
+void setup()
+{
+    Serial.begin(9600);
+    Serial.println("DHT TEST PROGRAM");
+    Serial.print("LIBRARY VERSION: ");
+    Serial.println(DHT11LIB_VERSION);
+    Serial.println();
+    Serial.println("Type,\tstatus,\tHumidity (%),\tTemperature (C)");
 }
 
-void loop(){
-
-int chk;
-
-Serial.print("DHT11, \t");
-
-chk = DHT.read(DHT11_PIN); // READ DATA
-
-switch (chk){
-
-case DHTLIB_OK:
-
-Serial.print("OK,\t");
-
-break;
-
-case DHTLIB_ERROR_CHECKSUM:
-
-Serial.print("Checksum error,\t");
-
-break;
-
-case DHTLIB_ERROR_TIMEOUT:
-
-Serial.print("Time out error,\t");
-
-break;
-
-default:
-
-Serial.print("Unknown error,\t");
-
-break;
-
+void loop()
+{
+    int chk;
+    Serial.print("DHT11, \t");
+    
+    chk = DHT.read(DHT11_PIN);  // 读取传感器数据
+    
+    switch (chk)
+    {
+        case DHTLIB_OK:
+            Serial.print("OK,\t");
+            break;
+        case DHTLIB_ERROR_CHECKSUM:
+            Serial.print("Checksum error,\t");
+            break;
+        case DHTLIB_ERROR_TIMEOUT:
+            Serial.print("Time out error,\t");
+            break;
+        default:
+            Serial.print("Unknown error,\t");
+            break;
+    }
+    
+    // 显示传感器数据
+    Serial.print(DHT.humidity, 1);  // 湿度(1位小数)
+    Serial.print(",\t");
+    Serial.println(DHT.temperature, 1);  // 温度(1位小数)
+    
+    delay(1000);  // 每秒读取一次
 }
-
-// DISPLAT DATA
-
-Serial.print(DHT.humidity,1);
-
-Serial.print(",\t");
-
-Serial.println(DHT.temperature,1);
-
-delay(1000);
-
-}
+```
 
 库文件下载地址
 
@@ -1177,6 +1048,7 @@ USB线*1
 
 测试代码
 
+```
 int sensorPin =A0 ; //定义模拟口A0
 
 int value = 0; //设置value为0
@@ -1185,7 +1057,7 @@ void setup()
 
 {
 
-Serial.begin(9600); //设置波特率
+	Serial.begin(9600); //设置波特率
 
 }
 
@@ -1193,13 +1065,14 @@ void loop()
 
 {
 
-value = analogRead(sensorPin); //将value设置为读取到的A0的数值
+    value = analogRead(sensorPin); //将value设置为读取到的A0的数值
 
-Serial.println(value, DEC); //显示value数值，并自动换行
+    Serial.println(value, DEC); //显示value数值，并自动换行
 
-delay(200); //延迟0.2秒
+    delay(200); //延迟0.2秒
 
 }
+```
 
 测试结果
 
@@ -1229,6 +1102,7 @@ USB线*1
 
 测试代码
 
+```
 int ledPin = 13; //定义数字口13
 
 int switcher = 3; // 定义数字口3
@@ -1237,9 +1111,9 @@ void setup()
 
 {
 
-pinMode(ledPin, OUTPUT); // 将ledPin设置为输出
+    pinMode(ledPin, OUTPUT); // 将ledPin设置为输出
 
-pinMode(switcher, INPUT); //将switcher设置为输入
+    pinMode(switcher, INPUT); //将switcher设置为输入
 
 }
 
@@ -1247,29 +1121,28 @@ void loop()
 
 {
 
-if(digitalRead(switcher)==HIGH) //当读取数字口3，并发现为高电平
+    if(digitalRead(switcher)==HIGH) //当读取数字口3，并发现为高电平
 
-{
+    {
 
-digitalWrite(ledPin, HIGH); // LED亮起
+    	digitalWrite(ledPin, HIGH); // LED亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(ledPin, LOW); // LED变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(ledPin, LOW); // LED变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码，上电后，倾斜一方时 Arduino UNO 板上的 D13
-的指示灯亮，数字倾斜模块上D1灯灭；倾斜另一方时 Arduino UNO 板上的 D13
-的指示灯灭，数字倾斜模块上D1灯亮。
+按照上图接好线，上传好代码，上电后，倾斜一方时 Arduino UNO 板上的 D13的指示灯亮，数字倾斜模块上D1灯灭；倾斜另一方时 Arduino UNO 板上的 D13的指示灯灭，数字倾斜模块上D1灯亮。
 
 ## 实验十四 麦克风声音传感器
 
@@ -1293,6 +1166,7 @@ USB线*1
 
 测试代码
 
+```
 int sensorPin =A0 ; //定义模拟口A0
 
 int value = 0; //设置value为0
@@ -1301,7 +1175,7 @@ void setup()
 
 {
 
-Serial.begin(9600); //设置波特率
+	Serial.begin(9600); //设置波特率
 
 }
 
@@ -1309,13 +1183,14 @@ void loop()
 
 {
 
-value = analogRead(sensorPin); //将value设置为读取到的A0的数值
+    value = analogRead(sensorPin); //将value设置为读取到的A0的数值
 
-Serial.println(value, DEC); //显示value数值，并自动换行
+    Serial.println(value, DEC); //显示value数值，并自动换行
 
-delay(100); //延迟0.1秒
+    delay(100); //延迟0.1秒
 
 }
+```
 
 测试结果
 
@@ -1345,6 +1220,7 @@ USB线*1
 
 测试代码
 
+```
 int ledPin = 13; //定义数字口13
 
 int inputPin = 3; //定义数字口3
@@ -1355,39 +1231,39 @@ void setup()
 
 {
 
-pinMode(ledPin, OUTPUT); //将ledPin设置为输出
+    pinMode(ledPin, OUTPUT); //将ledPin设置为输出
 
-pinMode(inputPin, INPUT); //将inputPin设置为输入
+    pinMode(inputPin, INPUT); //将inputPin设置为输入
 
 }
 
-void loop(){
-
-val = digitalRead(inputPin); //读取到数字口3的数值，并赋值给val
-
-if (val == LOW) //当val为低电平时，LED亮起
-
+void loop()
 {
 
-digitalWrite(ledPin, HIGH); //LED亮起
+    val = digitalRead(inputPin); //读取到数字口3的数值，并赋值给val
+
+    if (val == LOW) //当val为低电平时，LED亮起
+
+    {
+
+    	digitalWrite(ledPin, HIGH); //LED亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(ledPin, LOW); //LED变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(ledPin, LOW); //LED变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码后，上电后，Arduino UNO 板上的 D13
-的指示灯关闭，模块上D1灯关闭；当有磁铁靠近模块时， Arduino UNO 板上的
-D13 的指示灯亮起，模块上D1灯亮起。
+按照上图接好线，上传好代码后，上电后，Arduino UNO 板上的 D13的指示灯关闭，模块上D1灯关闭；当有磁铁靠近模块时， Arduino UNO 板上的D13 的指示灯亮起，模块上D1灯亮起。
 
 ## 实验十六 碰撞传感器
 
@@ -1411,6 +1287,7 @@ USB线*1
 
 测试代码
 
+```
 int Led=13;//定义 LED 接口
 
 int Shock=3;//定义碰撞传感器接口
@@ -1421,9 +1298,9 @@ void setup()
 
 {
 
-pinMode(Led,OUTPUT);//定义 LED 为输出接口
+    pinMode(Led,OUTPUT);//定义 LED 为输出接口
 
-pinMode(Shock,INPUT);//定义碰撞击传感器为输出接口
+    pinMode(Shock,INPUT);//定义碰撞击传感器为输出接口
 
 }
 
@@ -1431,30 +1308,30 @@ void loop()
 
 {
 
-val=digitalRead(Shock);//将数字接口 3 的值读取赋给 val
+    val=digitalRead(Shock);//将数字接口 3 的值读取赋给 val
 
-if(val==LOW)//当碰撞传感器检测有信号时，LED 亮起
+    if(val==LOW)//当碰撞传感器检测有信号时，LED 亮起
 
-{
+    {
 
-digitalWrite(Led,HIGH); //LED 亮起
+    	digitalWrite(Led,HIGH); //LED 亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(Led,LOW); //LED 变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(Led,LOW); //LED 变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，烧录好代码；上电后，将碰撞传感器的小铁片往下压，
-Arduino UNO 板上的 D13 的指示灯亮起和碰撞模块上D1灯亮起，否则。Arduino UNO 板上的 D13 的指示灯熄灭和碰撞模块上D1灯熄灭。
+按照上图接好线，烧录好代码；上电后，将碰撞传感器的小铁片往下压，Arduino UNO 板上的 D13 的指示灯亮起和碰撞模块上D1灯亮起，否则。Arduino UNO 板上的 D13 的指示灯熄灭和碰撞模块上D1灯熄灭。
 
 ## 实验十七 敲击模块传感器
 
@@ -1478,6 +1355,7 @@ USB线*1
 
 测试代码
 
+```
 int Led=13;//定义数字口13
 
 int Shock=3;//定义数字口3
@@ -1488,9 +1366,9 @@ void setup()
 
 {
 
-pinMode(Led,OUTPUT);//将Led设置为输出
+    pinMode(Led,OUTPUT);//将Led设置为输出
 
-pinMode(Shock,INPUT);//将Shock设置为输入
+    pinMode(Shock,INPUT);//将Shock设置为输入
 
 }
 
@@ -1498,31 +1376,30 @@ void loop()
 
 {
 
-val=digitalRead(Shock);//读取到数字口3的数值，并赋值给val
+    val=digitalRead(Shock);//读取到数字口3的数值，并赋值给val
 
-if(val==LOW) //当val为低电平时，Led亮起
+    if(val==LOW) //当val为低电平时，Led亮起
 
-{
+    {
 
-digitalWrite(Led,HIGH); //Led亮起
+    	digitalWrite(Led,HIGH); //Led亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(Led,LOW); //Led变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(Led,LOW); //Led变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码，上电后，敲击该模块，Arduino UNO 板上的
-
-D13 的 LED 指示灯和模块上 D1 灯亮起。
+按照上图接好线，上传好代码，上电后，敲击该模块，Arduino UNO 板上的D13 的 LED 指示灯和模块上 D1 灯亮起。
 
 ## 实验十八 避障传感器
 
@@ -1546,6 +1423,7 @@ USB线*1
 
 测试代码
 
+```
 const int sensorPin = 3; //定义数字口13
 
 const int ledPin = 13; //定义数字口3
@@ -1556,9 +1434,9 @@ void setup()
 
 {
 
-pinMode(ledPin, OUTPUT); //将ledPin设置为输出
+    pinMode(ledPin, OUTPUT); //将ledPin设置为输出
 
-pinMode(sensorPin, INPUT);//将sensorPin设置为输入
+    pinMode(sensorPin, INPUT);//将sensorPin设置为输入
 
 }
 
@@ -1566,32 +1444,32 @@ void loop()
 
 {
 
-sensorState = digitalRead(sensorPin);
+    sensorState = digitalRead(sensorPin);
 
-//读取到数字口3的数值，并赋值给sensorState
+    //读取到数字口3的数值，并赋值给sensorState
 
-if (sensorState == LOW) //当sensorState为低电平时，LED亮起
+    if (sensorState == LOW) //当sensorState为低电平时，LED亮起
 
-{
+    {
 
-digitalWrite(ledPin, HIGH);//LED亮起
+    	digitalWrite(ledPin, HIGH);//LED亮起
+
+    }
+
+    else
+
+    {
+
+    	digitalWrite(ledPin, LOW);//LED变暗
+
+    }
 
 }
-
-else
-
-{
-
-digitalWrite(ledPin, LOW);//LED变暗
-
-}
-
-}
+```
 
 测试结果
 
-按照上图接好线，上传好代码，上电后，通电后，靠近红外发射头的电位器顺时针调到尽头，再调节靠近红外接收头的电位器，观察D1灯，使D1灯关闭，并且保持将要亮起的临界点，此时感应距离最长。没有障碍物挡住红外避障传感器时，红外避障传感器上的D1灯关闭，Arduino UNO 板上的 D13
-的指示灯关闭；当用障碍物挡住红外避障传感器，红外避障传感器上的D1灯亮起，Arduino UNO 板上的 D13 的指示灯亮起。
+按照上图接好线，上传好代码，上电后，通电后，靠近红外发射头的电位器顺时针调到尽头，再调节靠近红外接收头的电位器，观察D1灯，使D1灯关闭，并且保持将要亮起的临界点，此时感应距离最长。没有障碍物挡住红外避障传感器时，红外避障传感器上的D1灯关闭，Arduino UNO 板上的 D13的指示灯关闭；当用障碍物挡住红外避障传感器，红外避障传感器上的D1灯亮起，Arduino UNO 板上的 D13 的指示灯亮起。
 
 ## 实验十九 LM35温度传感器
 
@@ -1617,11 +1495,12 @@ LM35温度传感器*1
 
 测试代码
 
+```
 void setup()
 
 {
 
-Serial.begin(9600);//设置波特率
+	Serial.begin(9600);//设置波特率
 
 }
 
@@ -1629,23 +1508,24 @@ void loop()
 
 {
 
-int val; //定义数字变量val
+    int val; //定义数字变量val
 
-int dat;//定义数字变量dat
+    int dat;//定义数字变量dat
 
-val=analogRead(0);//将val设置为读取到的A0的数值
+    val=analogRead(0);//将val设置为读取到的A0的数值
 
-dat=(500 \* val) /1024; //计算出当前温度数字dat
+    dat=(500 * val) /1024; //计算出当前温度数字dat
 
-Serial.print("Temp:"); //显示 Temp:
+    Serial.print("Temp:"); //显示 Temp:
 
-Serial.print(dat); //显示计算的温度值
+    Serial.print(dat); //显示计算的温度值
 
-Serial.println("C");//显示C，并自动换行
+    Serial.println("C");//显示C，并自动换行
 
-delay(500); //延迟0.5S
+    delay(500); //延迟0.5S
 
 }
+```
 
 测试结果
 
@@ -1675,25 +1555,28 @@ USB线*1
 
 测试代码
 
+```
 void setup()
 
 {
 
-pinMode(3, OUTPUT); // 定义3脚为数字输出接口
+	pinMode(3, OUTPUT); // 定义3脚为数字输出接口
 
 }
 
-void loop() {
+void loop() 
+{
 
-digitalWrite(3, HIGH); // 打开激光头
+    digitalWrite(3, HIGH); // 打开激光头
 
-delay(1000); // 延时一秒
+    delay(1000); // 延时一秒
 
-digitalWrite(3, LOW); // 关闭激光头
+    digitalWrite(3, LOW); // 关闭激光头
 
-delay(1000); // 延时一秒
+    delay(1000); // 延时一秒
 
 }
+```
 
 测试结果
 
@@ -1703,8 +1586,7 @@ delay(1000); // 延时一秒
 
 实验说明
 
-本实验我们主要用来检测巡线传感器。传感器上的TCRT5000红外对管的工作原理是利用红外线对颜色的反射率不一样，将反射信号的强弱转化成电流信号。传感器在检测到黑色高电平有效，检测到白色是为低电平有效，检测高度为
-0—3cm。在电路中你可以使用旋钮电位器来调黑白寻迹的灵敏度。
+本实验我们主要用来检测巡线传感器。传感器上的TCRT5000红外对管的工作原理是利用红外线对颜色的反射率不一样，将反射信号的强弱转化成电流信号。传感器在检测到黑色高电平有效，检测到白色是为低电平有效，检测高度为0—3cm。在电路中你可以使用旋钮电位器来调黑白寻迹的灵敏度。
 
 实验中将传感器的S端接到开发板的数字口D3，在Arduino IDE的串口监视器上可看到对应的数值输出。
 
@@ -1724,11 +1606,12 @@ USB线*1
 
 测试代码
 
+```
 void setup()
 
 {
 
-Serial.begin(9600);//设置波特率
+	Serial.begin(9600);//设置波特率
 
 }
 
@@ -1736,11 +1619,12 @@ void loop()
 
 {
 
-Serial.println(digitalRead(3)); //输出从数字口3读取到的数值，并自动换行
+    Serial.println(digitalRead(3)); //输出从数字口3读取到的数值，并自动换行
 
-delay(500);//延迟0.5秒
+    delay(500);//延迟0.5秒
 
 }
+```
 
 测试结果
 
@@ -1773,93 +1657,77 @@ USB线*1
 
 测试代码
 
-\#include \<OneWire.h\>
+```
+#include <OneWire.h>
 
-int DS18S20_Pin = 3; //定义数字口3
+int DS18S20_Pin = 3;  // DS18B20温度传感器数据引脚连接数字口3
+OneWire ds(DS18S20_Pin);  // 创建OneWire实例
 
-OneWire ds(DS18S20_Pin); 
-
- void setup(void) {
-
-  Serial.begin(9600); //设置波特率
-
+void setup(void) 
+{
+    Serial.begin(9600);  // 初始化串口通信，波特率9600
 }
 
- void loop(void) {
-
-  float temperature = getTemp(); //调用函数计算温度值
-
-  Serial.println(temperature); //显示温度值，并自动换行
-
-  delay(100); //延迟0.1S   
-
+void loop(void) 
+{
+    float temperature = getTemp();  // 获取温度值
+    Serial.println(temperature);    // 输出温度值并换行
+    delay(100);                    // 延时100毫秒
 }
 
-float getTemp(){
-
-  //returns the temperature from one DS18S20 in DEG Celsius
-
-  byte data\[12\];
-
-  byte addr\[8\];
-
-  if ( !ds.search(addr)) {
-
-      //no more sensors on chain, reset search
-
-      ds.reset_search();
-
-      return -1000;
-
-  }
-
-  if ( OneWire::crc8( addr, 7) != addr\[7\]) {
-
-      Serial.println("CRC is not valid!");
-
-      return -1000;
-
-  }
-
-  if ( addr\[0\] != 0x10 && addr\[0\] != 0x28) {
-
-      Serial.print("Device is not recognized");
-
-      return -1000;
-
-  }
-
-  ds.reset();
-
-  ds.select(addr);
-
-  ds.write(0x44,1); // start conversion, with parasite power on at the end
-
-  byte present = ds.reset();
-
-  ds.select(addr);   
-
-  ds.write(0xBE); // Read Scratchpad  
-
-  for (int i = 0; i \< 9; i++) { // we need 9 bytes
-
-    data\[i\] = ds.read();
-
-  }
-
-  ds.reset_search();  
-
-  byte MSB = data\[1\];
-
-  byte LSB = data\[0\];
-
-  float tempRead = ((MSB \<\< 8) | LSB); //using two's compliment
-
-  float TemperatureSum = tempRead / 16;  
-
-  return TemperatureSum;   
-
+float getTemp()
+{
+    byte data[12];  // 存储传感器数据
+    byte addr[8];   // 存储传感器地址
+    
+    // 搜索传感器
+    if (!ds.search(addr)) 
+    {
+        ds.reset_search();  // 重置搜索状态
+        return -1000;       // 返回错误值
+    }
+    
+    // 校验地址CRC
+    if (OneWire::crc8(addr, 7) != addr[7]) 
+    {
+        Serial.println("CRC校验失败!");
+        return -1000;
+    }
+    
+    // 检查传感器类型
+    if (addr[0] != 0x10 && addr[0] != 0x28) 
+    {
+        Serial.println("不支持的设备类型");
+        return -1000;
+    }
+    
+    // 开始温度转换
+    ds.reset();
+    ds.select(addr);
+    ds.write(0x44, 1);  // 启动温度转换，寄生供电
+    
+    // 读取暂存器数据
+    byte present = ds.reset();
+    ds.select(addr);
+    ds.write(0xBE);  // 读取暂存器
+    
+    // 读取9字节数据
+    for (int i = 0; i < 9; i++) 
+    {
+        data[i] = ds.read();
+    }
+    
+    ds.reset_search();
+    
+    // 计算温度值
+    byte MSB = data[1];  // 高字节
+    byte LSB = data[0];  // 低字节
+    float tempRead = ((MSB << 8) | LSB);  // 合并两个字节
+    float TemperatureSum = tempRead / 16; // 转换为实际温度值
+    
+    return TemperatureSum;
 }
+```
 
 库文件下载地址
 

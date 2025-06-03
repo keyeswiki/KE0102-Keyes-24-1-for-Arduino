@@ -3,7 +3,7 @@ Arduino资料下载
 
 **Arduino资料包含库文件、项目代码、驱动，请点击下载才能进行后续的学习！！！！**
 
-下载：download:`Arduino资料 <./Arduino>`
+下载：:download:`Arduino资料 <./Arduino>`
 
 Arduino IDE软件下载
 ===================

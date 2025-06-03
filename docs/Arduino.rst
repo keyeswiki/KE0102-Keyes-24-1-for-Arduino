@@ -17,12 +17,10 @@ Arduino <https://www.arduino.cc/en/software>`__\ 下载软件，然后选择对�
    :alt: image-20250527121512549
 
 
-
 2、然后选择”\ **只需下载**\ ”，再一次选择”\ **只需下载**\ ”，就可以看到正在下载的页面.
 
 .. figure:: ./media/image-20250527115114993.png
    :alt: image-20250527115114993
-
 
 
 Arduino IDE软件安装
@@ -52,13 +50,11 @@ Arduino驱动安装
 .. figure:: ./media/KE0171连接电脑-1748583924562-1.png
    :alt: KE0171连接电脑
 
-   KE0171连接电脑
 
 2、打开“设备管理器”.
 
 .. figure:: ./media/image-20250527020321361-1748583924563-2.png
    :alt: image-20250527020321361
-
 
 3、检查驱动是否已经安装
 
@@ -86,12 +82,9 @@ Arduino驱动安装
    :alt: Snipaste_2025-05-30_11-34-54
 
 
-
 3、点击\ **“浏览（R）“**\ 选项，在弹出的方框中选择提供的\ |Snipaste_2025-05-30_11-37-22|,点击\ **“确定”**\ ，完成后点击\ **“下一步”**\ 进行驱动安装.
 
-**(记得下载驱动**
-
-**image-20250530012313456)**
+**(记得下载驱动**\ |image2|)
 
 .. figure:: ./media/Snipaste_2025-05-30_11-47-46-1748583924563-6.png
    :alt: Snipaste_2025-05-30_11-47-46
@@ -155,22 +148,19 @@ R3开发板接受到指令时指示灯闪烁一下，再显示“Hello World！�
 .. figure:: ./media/image-20250529233818712.png
    :alt: image-20250529233818712
 
-   image-20250529233818712
 
 设置COM端口，如下
 
 .. figure:: ./media/image-20250529233938665.png
    :alt: image-20250529233938665
 
-   image-20250529233938665
 
-点击\ |image2|\ 编译程序，检查程序是否错误；点击\ |image3|\ 上传程序；Keyes
+点击\ |image3|\ 编译程序，检查程序是否错误；点击\ |image4|\ 上传程序；Keyes
 UNO R3 开发板设置OK后右下脚显示如下图，和设备管理器中显示一致。
 
 .. figure:: ./media/image-20250529234135452.png
    :alt: image-20250529234135452
 
-   image-20250529234135452
 
 上传成功，输入R，点击发送，Keyes UNO R3 开发板上的
 D13的指示灯闪烁一次，串口监视器中显示 Hello World! 如下图
@@ -178,7 +168,6 @@ D13的指示灯闪烁一次，串口监视器中显示 Hello World! 如下图
 .. figure:: ./media/image-20250529234700578.png
    :alt: image-20250529234700578
 
-   image-20250529234700578
 
 那么恭喜你，你的第一个程序已经成功了！！！
 
@@ -204,7 +193,7 @@ LED模块*1
 
 杜邦线若干
 
-|image4|
+|image5|
 
 测试代码
 
@@ -277,7 +266,7 @@ USB线*1
 
 接线图
 
-|image5|
+|image6|
 
 测试代码
 
@@ -331,7 +320,7 @@ USB线*1
 
 接线图
 
-|image6|
+|image7|
 
 测试代码
 
@@ -377,7 +366,7 @@ USB线*1
 
 接线图
 
-|image7|
+|image8|
 
 测试代码
 
@@ -535,7 +524,7 @@ LED模块*2
 
 接线图
 
-|image8|
+|image9|
 
 测试代码
 
@@ -620,7 +609,7 @@ USB线*1
 
 接线图
 
-|image9|
+|image10|
 
 测试代码
 
@@ -664,7 +653,7 @@ USB线*1
 
 接线图
 
-|image10|
+|image11|
 
 测试代码
 
@@ -709,7 +698,7 @@ USB线*1
 
 接线图
 
-|image11|
+|image12|
 
 测试代码
 
@@ -785,7 +774,7 @@ USB线*1
 
 接线图
 
-|image12|
+|image13|
 
 测试代码
 
@@ -838,7 +827,7 @@ USB线*1
 
 接线图
 
-|image13|
+|image14|
 
 测试代码
 
@@ -894,7 +883,7 @@ DHT11温湿度传感器*1
 
 接线图
 
-|image14|
+|image15|
 
 测试代码
 
@@ -952,7 +941,7 @@ USB线*1
 
 接线图
 
-|image15|
+|image16|
 
 测试代码
 
@@ -997,7 +986,7 @@ USB线*1
 
 接线图
 
-|image16|
+|image17|
 
 测试代码
 
@@ -1050,7 +1039,7 @@ USB线*1
 
 接线图
 
-|image17|
+|image18|
 
 测试代码
 
@@ -1095,7 +1084,7 @@ USB线*1
 
 接线图
 
-|image18|
+|image19|
 
 测试代码
 
@@ -1150,7 +1139,7 @@ USB线*1
 
 接线图
 
-|image19|
+|image20|
 
 测试代码
 
@@ -1205,7 +1194,7 @@ USB线*1
 
 接线图
 
-|image20|
+|image21|
 
 测试代码
 
@@ -1259,7 +1248,7 @@ USB线*1
 
 接线图
 
-|image21|
+|image22|
 
 测试代码
 
@@ -1317,7 +1306,7 @@ LM35温度传感器*1
 
 接线图
 
-|image22|
+|image23|
 
 测试代码
 
@@ -1363,7 +1352,7 @@ USB线*1
 
 接线图
 
-|image23|
+|image24|
 
 测试代码
 
@@ -1408,7 +1397,7 @@ USB线*1
 
 接线图
 
-|image24|
+|image25|
 
 测试代码
 
@@ -1452,7 +1441,7 @@ USB线*1
 
 接线图
 
-|image25|
+|image26|
 
 测试代码
 
@@ -1536,27 +1525,28 @@ USB线*1
 .. |image-20250527115344256| image:: ./media/image-20250527115344256-1748503184856-7.png
 .. |image-20250527115501137| image:: ./media/image-20250527115501137-1748503184856-8.png
 .. |Snipaste_2025-05-30_11-37-22| image:: ./media/Snipaste_2025-05-30_11-37-22.png
-.. |image2| image:: media/eb385c638a1aa0b63971a8871b1bb907.png
-.. |image3| image:: media/027da150683195e85b2f0dcdd879e0c1.png
-.. |image4| image:: media/ef8fc4fed8c964bfd81cbdb2fce41285.jpeg
-.. |image5| image:: media/befc72ced581329f53601ec57343858a.jpeg
-.. |image6| image:: media/41be77ba1c82ed0db6aacfadd51680e4.jpeg
-.. |image7| image:: media/81baffae5344681be2a5ab52f983a279.jpeg
-.. |image8| image:: media/ab08793993dc185393f1fc33dca7dc91.jpeg
-.. |image9| image:: media/2b5d3156ac58229a20b1c30a2c854a3c.jpeg
-.. |image10| image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
-.. |image11| image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
-.. |image12| image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
-.. |image13| image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
-.. |image14| image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
-.. |image15| image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
-.. |image16| image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
-.. |image17| image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
-.. |image18| image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
-.. |image19| image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
-.. |image20| image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
-.. |image21| image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
-.. |image22| image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
-.. |image23| image:: media/82a92246a41526e768efa92757a1b269.jpeg
-.. |image24| image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
-.. |image25| image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg
+.. |image2| image:: ./media/image-20250530012313456.png
+.. |image3| image:: media/eb385c638a1aa0b63971a8871b1bb907.png
+.. |image4| image:: media/027da150683195e85b2f0dcdd879e0c1.png
+.. |image5| image:: media/ef8fc4fed8c964bfd81cbdb2fce41285.jpeg
+.. |image6| image:: media/befc72ced581329f53601ec57343858a.jpeg
+.. |image7| image:: media/41be77ba1c82ed0db6aacfadd51680e4.jpeg
+.. |image8| image:: media/81baffae5344681be2a5ab52f983a279.jpeg
+.. |image9| image:: media/ab08793993dc185393f1fc33dca7dc91.jpeg
+.. |image10| image:: media/2b5d3156ac58229a20b1c30a2c854a3c.jpeg
+.. |image11| image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
+.. |image12| image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
+.. |image13| image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
+.. |image14| image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
+.. |image15| image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
+.. |image16| image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
+.. |image17| image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
+.. |image18| image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
+.. |image19| image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
+.. |image20| image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
+.. |image21| image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
+.. |image22| image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
+.. |image23| image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
+.. |image24| image:: media/82a92246a41526e768efa92757a1b269.jpeg
+.. |image25| image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
+.. |image26| image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg

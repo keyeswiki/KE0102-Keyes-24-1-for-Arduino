@@ -1,78 +1,123 @@
-.. _Arduino:
+Arduino资料下载
+===============
 
-Arduino
-=======
+**Arduino资料包含库文件、项目代码、驱动，请点击下载才能进行后续的学习！！！！**
 
-.. _Arduino-IDE和驱动的安装:
+下载：download:`Arduino资料 <./Arduino>`
 
-Arduino IDE和驱动的安装
-=======================
+Arduino IDE软件下载
+===================
 
-当我们拿到开发板时，首先我们要安装Arduino
-IDE和驱动，相关文件我们可以在官网上找到，以下链接是包含各种系统、各种版本的Arduino
-IDE和驱动任你选择。
+1、打开\ `Software \|
+Arduino <https://www.arduino.cc/en/software>`__\ 下载软件，然后选择对应的系统下载，下面以window系统为例。(|image1|)
 
-https://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x
+**注意：win11系统点击\ \ 此处进行到下载页面\ ,无需进行第2步操作.**
 
-下面我们介绍下Arduino-1.5.6 版本IDE在Windows系统的安装方法。
+.. figure:: ./media/7ea915dd-dfa2-4b18-ae8a-853082fd85ad.png
+   :alt: image-20250527121512549
 
-下载下来的文件是一个arduino-1.5.6-r2-windows.zip的压缩文件夹，解压出来到硬盘。
+   image-20250527121512549
 
-双击Arduino-1.5.6 .exe文件
+2、然后选择”\ **只需下载**\ ”，再一次选择”\ **只需下载**\ ”，就可以看到正在下载的页面.
 
-.. image:: media/f5f98943a74471640eefe95e3cccd0ee.png
+.. figure:: ./media/image-20250527115114993.png
+   :alt: image-20250527115114993
 
-然后
+   image-20250527115114993
 
-.. image:: media/44384a228758644aca47e983417e0079.png
+Arduino IDE软件安装
+===================
 
-然后
+1、点击此处文件夹\ |image-20250527115344256|\ 进入到下载中心，双击\ |image-20250527115501137|\ 进行安装。
 
-.. image:: media/704e73c99bcc5eed53d0ab210107b5e1.png
+2、选择”\ **我同意(I)**\ ”，跳转页面后选择”\ **仅为我安装（Administrator)**\ ”,再点击”\ **下一步**\ ”。
 
-等待安装完成.点击close，安装完成。
+.. figure:: ./media/image-20250527121512549-1748503184856-10.png
+   :alt: image-20250527121512549
 
-.. image:: media/742a2a6ad75dbc8f8d55cc25c2dc61ca.png
+   image-20250527121512549
 
-1.5.6版本安装后的样子。
+3、跳转页面后，点击”\ **浏览（B）**\ ”，可把软件放到指定位置（请用纯英文路径），点击”\ **安装**\ ”，安装完成后，点击”\ **完成**\ ”。
 
-.. image:: media/4baf5095962e49c1f3ebeb6c2da823f0.png
+.. figure:: ./media/image-20250527122939211-1748503184856-9.png
+   :alt: image-20250527122939211
 
-接下来是开发板驱动的安装，这次我们安装的是Keyes UNO
-R3开发板的驱动，Keyes 2560
-R3开发板安装驱动方法和这个类似，驱动文件可以用同一个文件。
+   image-20250527122939211
 
-不同的系统，安装驱动的方法也有一些细小的区别，下面我们介绍在WIN
-7系统安装驱动的方法。
+**注：点击”完成“后，如果后面出现弹框，请选择肯定的回复，例如选择”是“、”安装“.**
 
-第一次Keyes UNO
-R3开发板连接电脑时，点击计算机--属性--设备管理器，显示如下图。
+Arduino驱动安装
+===============
 
-.. image:: media/ef888e8d5fad0b30e4da671933f8842c.png
+1、将主板连接到电脑
 
-点击 Unknown device 安装驱动，如下图。
+.. figure:: ./media/KE0171连接电脑-1748583924562-1.png
+   :alt: KE0171连接电脑
 
-.. image:: media/231c0059b83eb424215dbc17edb21afb.png
+   KE0171连接电脑
 
-进入下图，选择
+2、打开“设备管理器”.
 
-.. image:: media/1b36a09374634af82cf432f86cb8843f.png
+.. figure:: ./media/image-20250527020321361-1748583924563-2.png
+   :alt: image-20250527020321361
 
-找到Arduino安装位置的drivers文件夹
+   image-20250527020321361
 
-.. image:: media/19f226835eac31a0ed12516dcefcfc53.png
+3、检查驱动是否已经安装
 
-点击“Next”，今天下图选择，开始安装驱动
+情况一：驱动安装完成，请跳过驱动教程，进行下一步学习
 
-|image1|\ |image2|
+.. figure:: ./media/Snipaste_2025-05-30_10-25-37-1748583924563-3.png
+   :alt: Snipaste_2025-05-30_10-25-37
 
-安装驱动完成，出现下图点击Close。
+   Snipaste_2025-05-30_10-25-37
 
-这样驱动就装好了。点击计算机--属性--设备管理器，我们可看见如下图。
+情况二：驱动没有安装，请进行以下教程手动安装驱动
 
-.. image:: media/af9806622ecf816c62f7597448a3cc5f.png
+.. figure:: ./media/Snipaste_2025-05-30_11-27-48-1748583924563-8.png
+   :alt: Snipaste_2025-05-30_11-27-48
 
-.. _Arduino-IDE的使用方法:
+   Snipaste_2025-05-30_11-27-48
+
+1、鼠标右击\ **“USB串行设备”**\ ，在弹出框中选择\ **“更新驱动程序（P）”**
+
+.. figure:: ./media/Snipaste_2025-05-30_11-31-19-1748583924563-4.png
+   :alt: Snipaste_2025-05-30_11-31-19
+
+   Snipaste_2025-05-30_11-31-19
+
+2、点击选择\ **“浏览我的电脑以查找驱动程序（R）”**.
+
+.. figure:: ./media/Snipaste_2025-05-30_11-34-54-1748583924563-9.png
+   :alt: Snipaste_2025-05-30_11-34-54
+
+   Snipaste_2025-05-30_11-34-54
+
+3、点击\ **“浏览（R）“**\ 选项，在弹出的方框中选择提供的\ |Snipaste_2025-05-30_11-37-22|,点击\ **“确定”**\ ，完成后点击\ **“下一步”**\ 进行驱动安装.
+
+**(记得下载驱动**
+
+**image-20250530012313456)**
+
+.. figure:: ./media/Snipaste_2025-05-30_11-47-46-1748583924563-6.png
+   :alt: Snipaste_2025-05-30_11-47-46
+
+   Snipaste_2025-05-30_11-47-46
+
+4、界面显示如下图类似的话语，证明驱动安装成功，点击\ **“关闭“**.
+
+.. figure:: ./media/Snipaste_2025-05-30_11-49-56-1748583924563-7.png
+   :alt: Snipaste_2025-05-30_11-49-56
+
+   Snipaste_2025-05-30_11-49-56
+
+5.驱动安装完成后，选择\ **“端口”**\ 选项，如图对应端口的名字改变成Arduino
+Uno，证明驱动安装完成.
+
+.. figure:: ./media/Snipaste_2025-05-30_11-52-13-1748583924563-10.png
+   :alt: Snipaste_2025-05-30_11-52-13
+
+   Snipaste_2025-05-30_11-52-13
 
 Arduino IDE的使用方法
 =====================
@@ -88,11 +133,13 @@ R3开发板的USB驱动安装成功之后，我们可以在Windows设备管理�
 
    int val;
    int ledpin=13; 
+
    void setup()
    {
        Serial.begin(9600);
        pinMode(ledpin,OUTPUT);
    }
+
    void loop()
    {
        val=Serial.read();
@@ -114,30 +161,40 @@ R3开发板接受到指令时指示灯闪烁一下，再显示“Hello World！�
 
 打开Arduino 的软件，设置板，如下。
 
-.. image:: media/43d9c16b238cfa52845c3a1b553cc630.png
+.. figure:: ./media/image-20250529233818712.png
+   :alt: image-20250529233818712
+
+   image-20250529233818712
 
 设置COM端口，如下
 
-.. image:: media/025e24eacb26620c8831c8a3571412f6.png
+.. figure:: ./media/image-20250529233938665.png
+   :alt: image-20250529233938665
 
-点击\ |image3|\ 编译程序，检查程序是否错误；点击\ |image4|\ 上传程序；Keyes
+   image-20250529233938665
+
+点击\ |image2|\ 编译程序，检查程序是否错误；点击\ |image3|\ 上传程序；Keyes
 UNO R3 开发板设置OK后右下脚显示如下图，和设备管理器中显示一致。
 
-.. image:: media/add2f4f32678fe555861ae1763488afd.png
+.. figure:: ./media/image-20250529234135452.png
+   :alt: image-20250529234135452
+
+   image-20250529234135452
 
 上传成功，输入R，点击发送，Keyes UNO R3 开发板上的
 D13的指示灯闪烁一次，串口监视器中显示 Hello World! 如下图
 
-.. image:: media/fa8f2de13c41710b9dbbfde0833eca74.png
+.. figure:: ./media/image-20250529234700578.png
+   :alt: image-20250529234700578
+
+   image-20250529234700578
 
 那么恭喜你，你的第一个程序已经成功了！！！
 
-实验课程
+项目课程
 ========
 
-.. _实验一-LED模块:
-
-实验一 LED模块
+项目一 LED模块
 --------------
 
 实验说明
@@ -156,7 +213,7 @@ LED模块*1
 
 杜邦线若干
 
-.. image:: media/ef8fc4fed8c964bfd81cbdb2fce41285.jpeg
+|image4|
 
 测试代码
 
@@ -167,25 +224,16 @@ LED模块*1
    int led = 3; //定义数字口3
 
    void setup()
-
    {
-
-     pinMode(led, OUTPUT);     //设置led为输出
-
+       pinMode(led, OUTPUT);//设置led为输出
    }
 
    void loop()
-
    {
-
-     digitalWrite(led, HIGH);   //开启led
-
-     delay(1000); //延迟1秒
-
-     digitalWrite(led, LOW);    //关闭led
-
-     delay(1000);//延迟1秒
-
+       digitalWrite(led, HIGH);//开启led
+       delay(1000); //延迟1秒
+       digitalWrite(led, LOW);//关闭led
+       delay(1000);//延迟1秒
    }
 
 代码B:
@@ -195,46 +243,30 @@ LED模块*1
    int ledPin = 3; // 定义数字口3
 
    void setup()
-
    {
-
        pinMode(ledPin, OUTPUT);// 将ledPin设置为输出
-
    }
 
    void loop()
-
    {
-
        for (int a=0; a<=255;a++)// 设置使LED逐渐变亮
-
        {
-
            analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
-
            delay(10); // 延迟0.01秒
-
        }
-
        for (int a=255; a>=0;a--) // 设置使LED逐渐变暗
-
        {
-
            analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
-
            delay(10); // 延迟0.01秒
-
        }
-
        delay(1000);// 延迟1秒
-
    }
 
 测试结果
 
 上传完代码A，上电后，我们就可以看到LED不停闪烁，间隔大约为1秒。上传完代码B，上电后，我们就可以看到LED先逐渐变亮，后逐渐变暗，循环交替。
 
-实验二 干簧管模块
+项目二 干簧管模块
 -----------------
 
 实验说明
@@ -254,50 +286,33 @@ USB线*1
 
 接线图
 
-.. image:: media/befc72ced581329f53601ec57343858a.jpeg
+|image5|
 
 测试代码
 
 ::
 
    int Led=13;//定义数字口13
-
    int buttonpin=3; //定义数字口3
-
    int val;//定义数字变量val
 
    void setup()
-
    {
-
        pinMode(Led,OUTPUT);//将Led设置为输出
-
        pinMode(buttonpin,INPUT);//将buttonpin设置为输入
-
    }
 
    void loop()
-
    {
-
        val=digitalRead(buttonpin);// 读取数字口3的数值，并赋值给val
-
        if(val==LOW)//当val为高电平时
-
        {
-
            digitalWrite(Led,HIGH); //LED亮起
-
        }
-
        else
-
        {
-
            digitalWrite(Led,LOW); //LED熄灭
-
        }
-
    }
 
 测试结果
@@ -306,7 +321,7 @@ USB线*1
 D13的指示灯熄灭，模块上D1灯熄灭；当有磁铁靠近模块时， Arduino UNO
 板上的D13 的指示灯亮起，模块上D1灯亮。
 
-实验三 有源蜂鸣器模块
+项目三 有源蜂鸣器模块
 ---------------------
 
 实验说明
@@ -325,41 +340,32 @@ USB线*1
 
 接线图
 
-.. image:: media/41be77ba1c82ed0db6aacfadd51680e4.jpeg
+|image6|
 
 测试代码
 
 ::
 
-   int buzzPin = 3;    //定义数字口3
+   int buzzPin = 3;//定义数字口3
 
-    void setup() 
-
-    {       
-
-     pinMode(buzzPin, OUTPUT);  //将buzzPin设置为输出
-
+   void setup()
+   {
+     pinMode(buzzPin, OUTPUT);//将buzzPin设置为输出
    }
 
-    void loop()                    
-
+   void loop()
    {
-
-     digitalWrite(buzzPin, HIGH);//有源蜂鸣器响起
-
-     delay(2000); //延迟2秒
-
-     digitalWrite(buzzPin, LOW); //有源蜂鸣器关闭
-
-     delay(2000);  //延迟2秒     
-
+     digitalWrite(buzzPin, HIGH);//有源蜂鸣器响起
+     delay(2000); //延迟2秒
+     digitalWrite(buzzPin, LOW); //有源蜂鸣器关闭
+     delay(2000);//延迟2秒     
    }
 
 测试结果
 
 有源蜂鸣器只需要有个高电平电压蜂鸣器就响起。上传好代码，连接好线，上电后，有源蜂鸣器响2秒，静音2秒，循环交替。
 
-实验四 无源蜂鸣器模块
+项目四 无源蜂鸣器模块
 ---------------------
 
 实验说明
@@ -380,7 +386,7 @@ USB线*1
 
 接线图
 
-.. image:: media/81baffae5344681be2a5ab52f983a279.jpeg
+|image7|
 
 测试代码
 
@@ -391,53 +397,30 @@ USB线*1
    int buzzer=3; //定义数字口3
 
    void setup()
-
    {
-
        pinMode(buzzer,OUTPUT);//将buzzer设置为输出
-
    }
 
    void loop()
-
    {
-
        unsigned char i,j;//定义变量i，j
-
        while(1)
-
        {
-
            for(i=0;i<80;i++)// 输出一个频率的声音
-
            {
-
                digitalWrite(buzzer,HIGH);
-
                delay(1);//延迟1ms
-
                digitalWrite(buzzer,LOW);
-
                delay(1);//延迟1ms
-
            }
-
            for(i=0;i<100;i++)// 输出另一个频率的声音
-
            {
-
                digitalWrite(buzzer,HIGH);
-
                delay(2);//延迟2ms
-
                digitalWrite(buzzer,LOW);
-
                delay(2);//延迟2ms
-
            }
-
        }
-
    }
 
 代码B:
@@ -540,7 +523,7 @@ USB线*1
 
 上传完代码A，上电后，无源蜂鸣器会发出两种不同的声音，两种声音循环交替。上传完代码B，上电后，无源蜂鸣器会想响起《欢乐颂》的曲子。
 
-实验五 旋转编码器模块
+项目五 旋转编码器模块
 ---------------------
 
 实验说明
@@ -561,119 +544,72 @@ LED模块*2
 
 接线图
 
-.. image:: media/ab08793993dc185393f1fc33dca7dc91.jpeg
+|image8|
 
 测试代码
 
 ::
 
    const int interruptA = 0; //中断0就是在数字口2
-
    const int interruptB = 1;//中断1就是在数字口3
 
    int CLK = 2; // 定义数字口2
-
    int DAT = 3; // 定义数字口3
-
    int BUTTON = 4; // 定义数字口4
-
    int LED1 = 5; // 定义数字口5
-
    int LED2 = 6; // 定义数字口6
-
    int COUNT = 0;//设置数字变量COUNT为0
 
    void setup()
-
    {
-
-       attachInterrupt(interruptA, RoteStateChanged, FALLING);
-
-       // 当数字口2由高电平变为低电平时，触发中断。
-
+       attachInterrupt(interruptA, RoteStateChanged, FALLING); // 当数字口2由高电平变为低电平时，触发中断。
        pinMode(CLK, INPUT);//设置CLK为输入
-
        digitalWrite(2, HIGH); // 设置数字口2为高电平
-
        pinMode(DAT, INPUT); //设置DAT为输入
-
        digitalWrite(3, HIGH); //设置数字口3为高电平
-
        pinMode(BUTTON, INPUT); //设置BUTTON为输入
-
        digitalWrite(4, HIGH); //设置数字口4为高电平
-
        pinMode(LED1, OUTPUT);//设置LED1为输出
-
        pinMode(LED2, OUTPUT);//设置LED1为输出
-
        Serial.begin(9600); //设置波特率
-
    }
 
    void loop()
-
    {
-
        if (digitalRead(BUTTON)==LOW)//当数字口4为低电平时
-
        {
-
            COUNT = 0; //设置数字变量COUNT为0
-
            Serial.println("STOP COUNT = 0");//显示对于内容
-
            digitalWrite(LED1, LOW);//LED1变暗
-
            digitalWrite(LED2, LOW);//LED2变暗
-
            delay (2000);//延迟2S
-
        }
-
        Serial.println(COUNT);//显示COUNT数据
-
    }
 
    void RoteStateChanged() //当数字口2由高电平变为低电平时
-
    {
-
        if (digitalRead(DAT)==HIGH) // 当数字口3为高电平时
-
        {
-
            COUNT++;//数字变量COUNT加1
-
            digitalWrite(LED1, HIGH);//LED1亮起
-
            digitalWrite(LED2, LOW);//LED2变暗
-
            delay(200);//延迟0.2S
-
        }
-
        else
-
        {
-
            COUNT--;//数字变量COUNT减1
-
            digitalWrite(LED2, HIGH);//LED2亮起
-
            digitalWrite(LED1, LOW);//LED1变暗
-
            delay(200);//延迟0.2S
-
        }
-
    }
 
 测试结果
 
 上传好代码，连接好线，上电后，我们可以通过旋转旋转编码器，可以随意控制两个草帽LED的亮灭。
 
-实验六 可调电位器模块
+项目六 可调电位器模块
 ---------------------
 
 实验说明
@@ -693,51 +629,37 @@ USB线*1
 
 接线图
 
-.. image:: media/2b5d3156ac58229a20b1c30a2c854a3c.jpeg
+|image9|
 
 测试代码
 
 ::
 
    int sensorPin =A0 ; //定义模拟口A0
-
    int value = 0; //设置value为0
 
    void setup()
-
    {
-
        Serial.begin(9600);//设置波特率
-
    }
 
    void loop()
-
    {
-
        value = analogRead(sensorPin); //将value设置为读取到的A0的数值
-
        Serial.println(value, DEC); //显示value数值，并自动换行
-
        delay(100); //延迟0.1秒
-
    }
 
 测试结果
 
 按照上图接好线，烧录好代码，上电后，我们可以在软件的串口监视器中看到模拟口A0模拟值，旋转旋钮，数据变化，变化范围在0-1023，如下图。
 
-.. image:: media/8517383472ca20d112b9ccc138661cd5.png
-
-.. _实验七-5V单路继电器模块:
-
-实验七 5V单路继电器模块
+项目七 5V单路继电器模块
 -----------------------
 
 实验说明
 
-| 本实验我们主要用来检测5V
-| 单路继电器模块。这个继电器模块是高电平有效，我们把继电器模块的信号端接在数字口3。实验中我们通过开发板控制数字口3，控制模块上继电器循环开启和关闭。
+本实验我们主要用来检测5V单路继电器模块。这个继电器模块是高电平有效，我们把继电器模块的信号端接在数字口3。实验中我们通过开发板控制数字口3，控制模块上继电器循环开启和关闭。
 
 实验器材
 
@@ -751,7 +673,7 @@ USB线*1
 
 接线图
 
-.. image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
+|image10|
 
 测试代码
 
@@ -760,34 +682,23 @@ USB线*1
    int Relay = 3; //定义数字口3
 
    void setup()
-
    {
-
        pinMode(Relay, OUTPUT); //将Relay设置为输出
-
    }
 
    void loop()
-
    {
-
        digitalWrite(Relay, HIGH); //打开继电器
-
        delay(2000); //延时2秒
-
        digitalWrite(Relay, LOW); //关闭继电器
-
        delay(2000); //延时2秒
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，继电器开启（ON端连通，NC断开）2秒，停止（ON端断开，NC端连通）2秒，循环交替，开启时继电器上D2灯亮起。
 
-.. _实验八-插件RGB模块:
-
-实验八 插件RGB模块
+项目八 插件RGB模块
 ------------------
 
 实验说明
@@ -807,7 +718,7 @@ USB线*1
 
 接线图
 
-.. image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
+|image11|
 
 测试代码
 
@@ -861,7 +772,7 @@ USB线*1
 
 上传完代码，上电后，RGB模块会陆续显示红色1秒，绿色1秒，蓝色1秒，黄色1秒，紫色1秒，白色1秒，停止显示1秒，然后循环交替。
 
-实验九 热敏电阻传感器
+项目九 热敏电阻传感器
 ---------------------
 
 实验说明
@@ -883,7 +794,7 @@ USB线*1
 
 接线图
 
-.. image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
+|image12|
 
 测试代码
 
@@ -907,7 +818,7 @@ USB线*1
 
    void loop() 
    {
-       Serial.print(Thermister(analogRead(0)));  // 读取并显示计算得到的温度值
+       Serial.print(Thermister(analogRead(A0)));  // 读取并显示计算得到的温度值
        Serial.println("c");                      // 显示单位"c"并自动换行
        delay(500);                               // 延迟500毫秒(0.5秒)
    }
@@ -916,9 +827,7 @@ USB线*1
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到当前环境中的温度值，如下图。
 
-.. image:: media/0e3dfebc6135f2a12e5154bd459c98ed.png
-
-实验十 按键传感器
+项目十 按键传感器
 -----------------
 
 实验说明
@@ -938,50 +847,32 @@ USB线*1
 
 接线图
 
-.. image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
+|image13|
 
 测试代码
 
 ::
 
    int ledPin = 13; //定义数字口13
-
    int inputPin = 3; //定义数字口3
 
    void setup()
-
    {
-
        pinMode(ledPin, OUTPUT); //将ledPin设置为输出
-
        pinMode(inputPin, INPUT); //将inputPin设置为输入
-
    }
 
    void loop()
-
    {
-
-       int val = digitalRead(inputPin);
-
-       //设置数字变量val，读取到数字口3的数值，并赋值给 val
-
+       int val = digitalRead(inputPin);//设置数字变量val，读取到数字口3的数值，并赋值给 val
        if (val == LOW) //当val为低电平时，LED亮起
-
        {
-
            digitalWrite(ledPin, HIGH); // LED亮起
-
        }
-
        else
-
        {
-
            digitalWrite(ledPin, LOW); // LED变暗
-
        }
-
    }
 
 测试结果
@@ -990,9 +881,7 @@ USB线*1
 D13 的指示灯亮起，释放传感器按键后， Arduino UNO 板上的
 D13的指示灯熄灭。
 
-.. _实验十一-DHT11温湿度传感器:
-
-实验十一 DHT11温湿度传感器
+项目十一 DHT11温湿度传感器
 --------------------------
 
 实验说明
@@ -1014,69 +903,45 @@ DHT11温湿度传感器*1
 
 接线图
 
-.. image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
+|image14|
 
 测试代码
 
 ::
 
-   #include <dht11.h>
+   #include <DHT11.h>
+   DHT11 dht11(3);//DHT11接在D3引脚
 
-   dht11 DHT;
-   #define DHT11_PIN 3
-
-   void setup()
+   void setup() 
    {
-       Serial.begin(9600);
-       Serial.println("DHT TEST PROGRAM");
-       Serial.print("LIBRARY VERSION: ");
-       Serial.println(DHT11LIB_VERSION);
-       Serial.println();
-       Serial.println("Type,\tstatus,\tHumidity (%),\tTemperature (C)");
+       Serial.begin(9600); 
    }
 
-   void loop()
+   void loop() 
    {
-       int chk;
-       Serial.print("DHT11, \t");
-       
-       chk = DHT.read(DHT11_PIN);  // 读取传感器数据
-       
-       switch (chk)
+       int temperature = 0;
+       int humidity = 0;
+       int result=dht11.readTemperatureHumidity(temperature, humidity);
+       if (result == 0) 
        {
-           case DHTLIB_OK:
-               Serial.print("OK,\t");
-               break;
-           case DHTLIB_ERROR_CHECKSUM:
-               Serial.print("Checksum error,\t");
-               break;
-           case DHTLIB_ERROR_TIMEOUT:
-               Serial.print("Time out error,\t");
-               break;
-           default:
-               Serial.print("Unknown error,\t");
-               break;
+           Serial.print("DHT11, OK");
+           Serial.print("  温度: ");
+           Serial.print(temperature);
+           Serial.print(" C\t湿度: ");
+           Serial.print(humidity);
+           Serial.println(" %");
+       } 
+       else 
+       {  
+           Serial.println(DHT11::getErrorString(result));// 读取失败，打印错误信息
        }
-       
-       // 显示传感器数据
-       Serial.print(DHT.humidity, 1);  // 湿度(1位小数)
-       Serial.print(",\t");
-       Serial.println(DHT.temperature, 1);  // 温度(1位小数)
-       
-       delay(1000);  // 每秒读取一次
    }
-
-库文件下载地址
-
-https://pan.baidu.com/s/1eSlMYD8
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，我们可在软件串口监视器中看到当前环境中的温度值和湿度值，如下图。
 
-.. image:: media/1ccd990a786881c3e386d4138c00ccef.png
-
-实验十二 光敏电阻传感器
+项目十二 光敏电阻传感器
 -----------------------
 
 实验说明
@@ -1096,43 +961,32 @@ USB线*1
 
 接线图
 
-.. image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
+|image15|
 
 测试代码
 
 ::
 
    int sensorPin =A0 ; //定义模拟口A0
-
    int value = 0; //设置value为0
 
    void setup()
-
    {
-
-       Serial.begin(9600); //设置波特率
-
+         Serial.begin(9600); //设置波特率
    }
 
    void loop()
-
    {
-
        value = analogRead(sensorPin); //将value设置为读取到的A0的数值
-
        Serial.println(value, DEC); //显示value数值，并自动换行
-
        delay(200); //延迟0.2秒
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到代表当前光线强弱的模拟值，光线越强，数值越大，如下图。
 
-.. image:: media/7fa8abc404c49f517a22e89caebbe76c.png
-
-实验十三 倾斜模块传感器
+项目十三 倾斜模块传感器
 -----------------------
 
 实验说明
@@ -1152,46 +1006,31 @@ USB线*1
 
 接线图
 
-.. image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
+|image16|
 
 测试代码
 
 ::
 
    int ledPin = 13; //定义数字口13
-
    int switcher = 3; // 定义数字口3
 
    void setup()
-
    {
-
        pinMode(ledPin, OUTPUT); // 将ledPin设置为输出
-
        pinMode(switcher, INPUT); //将switcher设置为输入
-
    }
 
    void loop()
-
    {
-
        if(digitalRead(switcher)==HIGH) //当读取数字口3，并发现为高电平
-
        {
-
            digitalWrite(ledPin, HIGH); // LED亮起
-
        }
-
        else
-
        {
-
            digitalWrite(ledPin, LOW); // LED变暗
-
        }
-
    }
 
 测试结果
@@ -1200,7 +1039,7 @@ USB线*1
 D13的指示灯亮，数字倾斜模块上D1灯灭；倾斜另一方时 Arduino UNO 板上的
 D13的指示灯灭，数字倾斜模块上D1灯亮。
 
-实验十四 麦克风声音传感器
+项目十四 麦克风声音传感器
 -------------------------
 
 实验说明
@@ -1220,43 +1059,32 @@ USB线*1
 
 接线图
 
-.. image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
+|image17|
 
 测试代码
 
 ::
 
    int sensorPin =A0 ; //定义模拟口A0
-
    int value = 0; //设置value为0
 
    void setup()
-
    {
-
-       Serial.begin(9600); //设置波特率
-
+         Serial.begin(9600); //设置波特率
    }
 
    void loop()
-
    {
-
        value = analogRead(sensorPin); //将value设置为读取到的A0的数值
-
        Serial.println(value, DEC); //显示value数值，并自动换行
-
        delay(100); //延迟0.1秒
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器相对应模拟值，如下图。声音越大模拟值越大。
 
-.. image:: media/c036d6720f56d6372acc33563cc29614.png
-
-实验十五 霍尔传感器
+项目十五 霍尔传感器
 -------------------
 
 实验说明
@@ -1276,49 +1104,33 @@ USB线*1
 
 接线图
 
-.. image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
+|image18|
 
 测试代码
 
 ::
 
    int ledPin = 13; //定义数字口13
-
    int inputPin = 3; //定义数字口3
-
    int val = 0; //定义数字变量val，并设为0
 
    void setup()
-
    {
-
        pinMode(ledPin, OUTPUT); //将ledPin设置为输出
-
        pinMode(inputPin, INPUT); //将inputPin设置为输入
-
    }
 
    void loop()
    {
-
        val = digitalRead(inputPin); //读取到数字口3的数值，并赋值给val
-
        if (val == LOW) //当val为低电平时，LED亮起
-
        {
-
            digitalWrite(ledPin, HIGH); //LED亮起
-
        }
-
        else
-
        {
-
            digitalWrite(ledPin, LOW); //LED变暗
-
        }
-
    }
 
 测试结果
@@ -1327,7 +1139,7 @@ USB线*1
 D13的指示灯关闭，模块上D1灯关闭；当有磁铁靠近模块时， Arduino UNO
 板上的D13 的指示灯亮起，模块上D1灯亮起。
 
-实验十六 碰撞传感器
+项目十六 碰撞传感器
 -------------------
 
 实验说明
@@ -1347,50 +1159,33 @@ USB线*1
 
 接线图
 
-.. image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
+|image19|
 
 测试代码
 
 ::
 
    int Led=13;//定义 LED 接口
-
    int Shock=3;//定义碰撞传感器接口
-
    int val;//定义数字变量 val
 
    void setup()
-
    {
-
        pinMode(Led,OUTPUT);//定义 LED 为输出接口
-
        pinMode(Shock,INPUT);//定义碰撞击传感器为输出接口
-
    }
 
    void loop()
-
    {
-
        val=digitalRead(Shock);//将数字接口 3 的值读取赋给 val
-
        if(val==LOW)//当碰撞传感器检测有信号时，LED 亮起
-
        {
-
            digitalWrite(Led,HIGH); //LED 亮起
-
        }
-
        else
-
        {
-
            digitalWrite(Led,LOW); //LED 变暗
-
        }
-
    }
 
 测试结果
@@ -1399,7 +1194,7 @@ USB线*1
 UNO 板上的 D13 的指示灯亮起和碰撞模块上D1灯亮起，否则。Arduino UNO
 板上的 D13 的指示灯熄灭和碰撞模块上D1灯熄灭。
 
-实验十七 敲击模块传感器
+项目十七 敲击模块传感器
 -----------------------
 
 实验说明
@@ -1419,50 +1214,33 @@ USB线*1
 
 接线图
 
-.. image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
+|image20|
 
 测试代码
 
 ::
 
    int Led=13;//定义数字口13
-
    int Shock=3;//定义数字口3
-
    int val;//定义数字变量val
 
    void setup()
-
    {
-
        pinMode(Led,OUTPUT);//将Led设置为输出
-
        pinMode(Shock,INPUT);//将Shock设置为输入
-
    }
 
    void loop()
-
    {
-
        val=digitalRead(Shock);//读取到数字口3的数值，并赋值给val
-
        if(val==LOW) //当val为低电平时，Led亮起
-
        {
-
            digitalWrite(Led,HIGH); //Led亮起
-
        }
-
        else
-
        {
-
            digitalWrite(Led,LOW); //Led变暗
-
        }
-
    }
 
 测试结果
@@ -1470,7 +1248,7 @@ USB线*1
 按照上图接好线，上传好代码，上电后，敲击该模块，Arduino UNO 板上的D13 的
 LED 指示灯和模块上 D1 灯亮起。
 
-实验十八 避障传感器
+项目十八 避障传感器
 -------------------
 
 实验说明
@@ -1490,52 +1268,33 @@ USB线*1
 
 接线图
 
-.. image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
+|image21|
 
 测试代码
 
 ::
 
    const int sensorPin = 3; //定义数字口13
-
    const int ledPin = 13; //定义数字口3
-
    int sensorState = 0; //定义数字变量sensorState，并设为0
 
    void setup()
-
    {
-
        pinMode(ledPin, OUTPUT); //将ledPin设置为输出
-
        pinMode(sensorPin, INPUT);//将sensorPin设置为输入
-
    }
 
    void loop()
-
    {
-
-       sensorState = digitalRead(sensorPin);
-
-       //读取到数字口3的数值，并赋值给sensorState
-
+       sensorState = digitalRead(sensorPin);//读取到数字口3的数值，并赋值给sensorState
        if (sensorState == LOW) //当sensorState为低电平时，LED亮起
-
        {
-
            digitalWrite(ledPin, HIGH);//LED亮起
-
        }
-
        else
-
        {
-
            digitalWrite(ledPin, LOW);//LED变暗
-
        }
-
    }
 
 测试结果
@@ -1545,9 +1304,7 @@ UNO 板上的
 D13的指示灯关闭；当用障碍物挡住红外避障传感器，红外避障传感器上的D1灯亮起，Arduino
 UNO 板上的 D13 的指示灯亮起。
 
-.. _实验十九-LM35温度传感器:
-
-实验十九 LM35温度传感器
+项目十九 LM35温度传感器
 -----------------------
 
 实验说明
@@ -1569,49 +1326,34 @@ LM35温度传感器*1
 
 接线图
 
-.. image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
+|image22|
 
 测试代码
 
 ::
 
    void setup()
-
    {
-
        Serial.begin(9600);//设置波特率
-
    }
 
    void loop()
-
    {
-
        int val; //定义数字变量val
-
        int dat;//定义数字变量dat
-
-       val=analogRead(0);//将val设置为读取到的A0的数值
-
+       val=analogRead(A0);//将val设置为读取到的A0的数值
        dat=(500 * val) /1024; //计算出当前温度数字dat
-
        Serial.print("Temp:"); //显示 Temp:
-
        Serial.print(dat); //显示计算的温度值
-
        Serial.println("C");//显示C，并自动换行
-
        delay(500); //延迟0.5S
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到当前环境中的温度值，如下图。
 
-.. image:: media/722e9d11c697ee67288ed69fbf4722e0.png
-
-实验二十 激光头传感器模块
+项目二十 激光头传感器模块
 -------------------------
 
 实验说明
@@ -1630,38 +1372,30 @@ USB线*1
 
 接线图
 
-.. image:: media/82a92246a41526e768efa92757a1b269.jpeg
+|image23|
 
 测试代码
 
 ::
 
    void setup()
-
    {
-
        pinMode(3, OUTPUT); // 定义3脚为数字输出接口
-
    }
 
    void loop() 
    {
-
        digitalWrite(3, HIGH); // 打开激光头
-
        delay(1000); // 延时一秒
-
        digitalWrite(3, LOW); // 关闭激光头
-
        delay(1000); // 延时一秒
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，激光头打开1秒，关闭1秒，循环交替。
 
-实验二十一 巡线传感器
+项目二十一 巡线传感器
 ---------------------
 
 实验说明
@@ -1683,45 +1417,34 @@ USB线*1
 
 接线图
 
-.. image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
+|image24|
 
 测试代码
 
 ::
 
    void setup()
-
    {
-
        Serial.begin(9600);//设置波特率
-
    }
 
    void loop()
-
    {
-
        Serial.println(digitalRead(3)); //输出从数字口3读取到的数值，并自动换行
-
        delay(500);//延迟0.5秒
-
    }
 
 测试结果
 
 按照上图接好线，上传好代码，上电后，传感器在检测到黑色时，信号端输出高电平，串口监视器显示1，传感器上D1指示灯熄灭；传感器在检测到其他颜色时，信号端输出低电平，串口监视器显示0，传感器上D1指示灯亮起。旋转电位器可调节灵敏度，将D1调节至亮与不亮的临界点时，灵敏度最高。
 
-.. image:: media/d52b84d15265030966a10eb62b88a010.png
-
-.. _实验二十二-18B20温度传感器:
-
-实验二十二 18B20温度传感器
+项目二十二 18B20温度传感器
 --------------------------
 
 实验说明
 
-| 本实验我们主要用来检测18B20温度传感器。该传感器主要由DS18B20可编程数字温度器等组成，具有体积小，抗干扰能力强，精度高的特点。它的测温范围
-| －55℃～+125℃，固有测温误差是1℃。
+本实验我们主要用来检测18B20温度传感器。该传感器主要由DS18B20可编程数字温度器等组成，具有体积小，抗干扰能力强，精度高的特点。它的测温范围
+－55℃～+125℃，固有测温误差是1℃。
 
 实验中将传感器的信号端接到开发板的数字口3，在Arduino
 IDE的串口监视器上可看到当前环境中的温度值。
@@ -1738,7 +1461,7 @@ USB线*1
 
 接线图
 
-.. image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg
+|image25|
 
 测试代码
 
@@ -1814,17 +1537,35 @@ USB线*1
        return TemperatureSum;
    }
 
-库文件下载地址
-
-https://pan.baidu.com/s/1o7HKVKQ
-
 测试结果
 
 按照上图接好线，上传好代码，上电后，通电后，我们可在软件串口监视器中看到当前环境温度值，如下图。
 
-.. image:: media/da4fbb644f61e4aded66f742aa85d5e3.png
-
-.. |image1| image:: media/501a7a03b5656b8ad60d5e077c58fa51.png
-.. |image2| image:: media/b9b5f051f1a2b6afdc68eb3b7b2f1c7d.png
-.. |image3| image:: media/eb385c638a1aa0b63971a8871b1bb907.png
-.. |image4| image:: media/027da150683195e85b2f0dcdd879e0c1.png
+.. |image1| image:: ./media/image-20250527113634546.png
+.. |image-20250527115344256| image:: ./media/image-20250527115344256-1748503184856-7.png
+.. |image-20250527115501137| image:: ./media/image-20250527115501137-1748503184856-8.png
+.. |Snipaste_2025-05-30_11-37-22| image:: ./../../../驱动/media/Snipaste_2025-05-30_11-37-22.png
+.. |image2| image:: media/eb385c638a1aa0b63971a8871b1bb907.png
+.. |image3| image:: media/027da150683195e85b2f0dcdd879e0c1.png
+.. |image4| image:: media/ef8fc4fed8c964bfd81cbdb2fce41285.jpeg
+.. |image5| image:: media/befc72ced581329f53601ec57343858a.jpeg
+.. |image6| image:: media/41be77ba1c82ed0db6aacfadd51680e4.jpeg
+.. |image7| image:: media/81baffae5344681be2a5ab52f983a279.jpeg
+.. |image8| image:: media/ab08793993dc185393f1fc33dca7dc91.jpeg
+.. |image9| image:: media/2b5d3156ac58229a20b1c30a2c854a3c.jpeg
+.. |image10| image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
+.. |image11| image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
+.. |image12| image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
+.. |image13| image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
+.. |image14| image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
+.. |image15| image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
+.. |image16| image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
+.. |image17| image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
+.. |image18| image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
+.. |image19| image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
+.. |image20| image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
+.. |image21| image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
+.. |image22| image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
+.. |image23| image:: media/82a92246a41526e768efa92757a1b269.jpeg
+.. |image24| image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
+.. |image25| image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg

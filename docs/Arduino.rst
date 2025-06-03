@@ -1544,7 +1544,7 @@ USB线*1
 .. |image1| image:: ./media/image-20250527113634546.png
 .. |image-20250527115344256| image:: ./media/image-20250527115344256-1748503184856-7.png
 .. |image-20250527115501137| image:: ./media/image-20250527115501137-1748503184856-8.png
-.. |Snipaste_2025-05-30_11-37-22| image:: ./../../../驱动/media/Snipaste_2025-05-30_11-37-22.png
+.. |Snipaste_2025-05-30_11-37-22| image:: ./media/Snipaste_2025-05-30_11-37-22.png
 .. |image2| image:: media/eb385c638a1aa0b63971a8871b1bb907.png
 .. |image3| image:: media/027da150683195e85b2f0dcdd879e0c1.png
 .. |image4| image:: media/ef8fc4fed8c964bfd81cbdb2fce41285.jpeg

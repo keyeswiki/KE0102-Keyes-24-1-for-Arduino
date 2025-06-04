@@ -158,6 +158,7 @@ R3开发板接受到指令时指示灯闪烁一下，再显示“Hello World！�
 .. figure:: ./media/image-20250529233938665.png
    :alt: image-20250529233938665
 
+
 点击\ |image3|\ 编译程序，检查程序是否错误；点击\ |image4|\ 上传程序；Keyes
 UNO R3 开发板设置OK后右下脚显示如下图，和设备管理器中显示一致。
 
@@ -637,6 +638,8 @@ USB线*1
 
 按照上图接好线，烧录好代码，上电后，我们可以在软件的串口监视器中看到模拟口A0模拟值，旋转旋钮，数据变化，变化范围在0-1023，如下图。
 
+|image11|
+
 项目七 5V单路继电器模块
 -----------------------
 
@@ -656,7 +659,7 @@ USB线*1
 
 接线图
 
-|image11|
+|image12|
 
 测试代码
 
@@ -701,7 +704,7 @@ USB线*1
 
 接线图
 
-|image12|
+|image13|
 
 测试代码
 
@@ -777,7 +780,7 @@ USB线*1
 
 接线图
 
-|image13|
+|image14|
 
 测试代码
 
@@ -810,6 +813,8 @@ USB线*1
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到当前环境中的温度值，如下图。
 
+|image15|
+
 项目十 按键传感器
 -----------------
 
@@ -830,7 +835,7 @@ USB线*1
 
 接线图
 
-|image14|
+|image16|
 
 测试代码
 
@@ -886,7 +891,7 @@ DHT11温湿度传感器*1
 
 接线图
 
-|image15|
+|image17|
 
 测试代码
 
@@ -924,6 +929,8 @@ DHT11温湿度传感器*1
 
 按照上图接好线，上传好代码，上电后，我们可在软件串口监视器中看到当前环境中的温度值和湿度值，如下图。
 
+|image18|
+
 项目十二 光敏电阻传感器
 -----------------------
 
@@ -944,7 +951,7 @@ USB线*1
 
 接线图
 
-|image16|
+|image19|
 
 测试代码
 
@@ -969,6 +976,8 @@ USB线*1
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到代表当前光线强弱的模拟值，光线越强，数值越大，如下图。
 
+|image20|
+
 项目十三 倾斜模块传感器
 -----------------------
 
@@ -989,7 +998,7 @@ USB线*1
 
 接线图
 
-|image17|
+|image21|
 
 测试代码
 
@@ -1042,7 +1051,7 @@ USB线*1
 
 接线图
 
-|image18|
+|image22|
 
 测试代码
 
@@ -1067,6 +1076,8 @@ USB线*1
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器相对应模拟值，如下图。声音越大模拟值越大。
 
+|image23|
+
 项目十五 霍尔传感器
 -------------------
 
@@ -1087,7 +1098,7 @@ USB线*1
 
 接线图
 
-|image19|
+|image24|
 
 测试代码
 
@@ -1142,7 +1153,7 @@ USB线*1
 
 接线图
 
-|image20|
+|image25|
 
 测试代码
 
@@ -1197,7 +1208,7 @@ USB线*1
 
 接线图
 
-|image21|
+|image26|
 
 测试代码
 
@@ -1251,7 +1262,7 @@ USB线*1
 
 接线图
 
-|image22|
+|image27|
 
 测试代码
 
@@ -1309,7 +1320,7 @@ LM35温度传感器*1
 
 接线图
 
-|image23|
+|image28|
 
 测试代码
 
@@ -1336,6 +1347,8 @@ LM35温度传感器*1
 
 按照上图接好线，上传好代码，上电后，我们可以在软件的串口监视器中看到当前环境中的温度值，如下图。
 
+|image29|
+
 项目二十 激光头传感器模块
 -------------------------
 
@@ -1355,7 +1368,7 @@ USB线*1
 
 接线图
 
-|image24|
+|image30|
 
 测试代码
 
@@ -1400,7 +1413,7 @@ USB线*1
 
 接线图
 
-|image25|
+|image31|
 
 测试代码
 
@@ -1420,6 +1433,11 @@ USB线*1
 测试结果
 
 按照上图接好线，上传好代码，上电后，传感器在检测到黑色时，信号端输出高电平，串口监视器显示1，传感器上D1指示灯熄灭；传感器在检测到其他颜色时，信号端输出低电平，串口监视器显示0，传感器上D1指示灯亮起。旋转电位器可调节灵敏度，将D1调节至亮与不亮的临界点时，灵敏度最高。
+
+.. figure:: ./media/ea1c135e2303d147e9a1e39239c3fb50.png
+   :alt: ea1c135e2303d147e9a1e39239c3fb50
+
+   ea1c135e2303d147e9a1e39239c3fb50
 
 项目二十二 18B20温度传感器
 --------------------------
@@ -1444,7 +1462,7 @@ USB线*1
 
 接线图
 
-|image26|
+|image32|
 
 测试代码
 
@@ -1524,6 +1542,8 @@ USB线*1
 
 按照上图接好线，上传好代码，上电后，通电后，我们可在软件串口监视器中看到当前环境温度值，如下图。
 
+|image33|
+
 .. |image1| image:: ./media/image-20250527113634546.png
 .. |image-20250527115344256| image:: ./media/image-20250527115344256-1748503184856-7.png
 .. |image-20250527115501137| image:: ./media/image-20250527115501137-1748503184856-8.png
@@ -1537,19 +1557,26 @@ USB线*1
 .. |image8| image:: media/81baffae5344681be2a5ab52f983a279.jpeg
 .. |image9| image:: media/ab08793993dc185393f1fc33dca7dc91.jpeg
 .. |image10| image:: media/2b5d3156ac58229a20b1c30a2c854a3c.jpeg
-.. |image11| image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
-.. |image12| image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
-.. |image13| image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
-.. |image14| image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
-.. |image15| image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
-.. |image16| image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
-.. |image17| image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
-.. |image18| image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
-.. |image19| image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
-.. |image20| image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
-.. |image21| image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
-.. |image22| image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
-.. |image23| image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
-.. |image24| image:: media/82a92246a41526e768efa92757a1b269.jpeg
-.. |image25| image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
-.. |image26| image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg
+.. |image11| image:: ./media/9ea521243f0cc51ef7e251bf37c9c3e7.png
+.. |image12| image:: media/e417a8a7130786b73f84e931b65b8e91.jpeg
+.. |image13| image:: media/b9cedab4e47f7b6a89b2cb7fcb0a3785.jpeg
+.. |image14| image:: media/ae94a6abfecf96fb43f51e263b44e524.jpeg
+.. |image15| image:: ./media/1159b018c54c7aa3fe8c273efb652377.png
+.. |image16| image:: media/2fcec7e45224cf0df6561905466d4f71.jpeg
+.. |image17| image:: media/da17c1dfcaa509b4967232b12d24ccb4.jpeg
+.. |image18| image:: ./media/a737ad117f7785feea339b093f856872.png
+.. |image19| image:: media/139c18b5b1ad5808ed7d5b471b611dde.jpeg
+.. |image20| image:: ./media/f763943b10902261974185902db21878.png
+.. |image21| image:: media/454f8df722c6e83ae9baaab6ce1a873f.jpeg
+.. |image22| image:: media/eba008c0dc17fc0a8316a62c1bd28c7e.jpeg
+.. |image23| image:: ./media/8322c7598ea7a6a65ad57b2c39a4f4bf.png
+.. |image24| image:: media/6db2d50d0551eeb8ecd02512393fe9b5.jpeg
+.. |image25| image:: media/8d7ef1bdeb4b3eee0ef114b4b2918e12.jpeg
+.. |image26| image:: media/9a5c65c1200a9211e8ea7f2b03d96a22.jpeg
+.. |image27| image:: media/7b0f7373022f6c7e29ddda062f8b5815.jpeg
+.. |image28| image:: media/fbbd0c4e254b376b37c67a81ae4a4fd8.jpeg
+.. |image29| image:: ./media/05fc18c66a2f66d0c4e93b05705197ab.png
+.. |image30| image:: media/82a92246a41526e768efa92757a1b269.jpeg
+.. |image31| image:: media/c9e82713b33bc1da39dac480d2314764.jpeg
+.. |image32| image:: media/9e70e746aa05ded51dab3a88780950d2.jpeg
+.. |image33| image:: ./media/b60c11bc14ed2357521bbc38c92d21f8.png
